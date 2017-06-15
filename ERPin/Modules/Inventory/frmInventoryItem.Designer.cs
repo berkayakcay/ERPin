@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInventoryItem));
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.groupControlInventory = new DevExpress.XtraEditors.GroupControl();
             this.btnAddPicture = new DevExpress.XtraEditors.SimpleButton();
             this.pbItemPicture = new System.Windows.Forms.PictureBox();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -41,28 +41,28 @@
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl7 = new DevExpress.XtraEditors.GroupControl();
+            this.groupControlTax = new DevExpress.XtraEditors.GroupControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.txtSaleTax = new DevExpress.XtraEditors.TextEdit();
             this.txtPurchaseTax = new DevExpress.XtraEditors.TextEdit();
-            this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
+            this.groupControlPrice = new DevExpress.XtraEditors.GroupControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.txtSalePrice = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.txtPurchasePrice = new DevExpress.XtraEditors.TextEdit();
-            this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            this.groupControlUnit = new DevExpress.XtraEditors.GroupControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBarcode = new DevExpress.XtraEditors.TextEdit();
             this.txtUnit = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.groupControlGroup = new DevExpress.XtraEditors.GroupControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.tctGroupName = new DevExpress.XtraEditors.TextEdit();
+            this.txtGroupName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtGroupCode = new DevExpress.XtraEditors.ButtonEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControlInventory)).BeginInit();
+            this.groupControlInventory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbItemPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtItemCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtItemName.Properties)).BeginInit();
@@ -70,38 +70,38 @@
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).BeginInit();
-            this.groupControl7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControlTax)).BeginInit();
+            this.groupControlTax.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSaleTax.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPurchaseTax.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
-            this.groupControl6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControlPrice)).BeginInit();
+            this.groupControlPrice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSalePrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPurchasePrice.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
-            this.groupControl5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControlUnit)).BeginInit();
+            this.groupControlUnit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBarcode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
-            this.groupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tctGroupName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControlGroup)).BeginInit();
+            this.groupControlGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGroupName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupCode.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupControl1
+            // groupControlInventory
             // 
-            this.groupControl1.Controls.Add(this.btnAddPicture);
-            this.groupControl1.Controls.Add(this.pbItemPicture);
-            this.groupControl1.Controls.Add(this.labelControl2);
-            this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Controls.Add(this.txtItemCode);
-            this.groupControl1.Controls.Add(this.txtItemName);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl1.Location = new System.Drawing.Point(0, 0);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(412, 114);
-            this.groupControl1.TabIndex = 0;
-            this.groupControl1.Text = "Inventory Info";
+            this.groupControlInventory.Controls.Add(this.btnAddPicture);
+            this.groupControlInventory.Controls.Add(this.pbItemPicture);
+            this.groupControlInventory.Controls.Add(this.labelControl2);
+            this.groupControlInventory.Controls.Add(this.labelControl1);
+            this.groupControlInventory.Controls.Add(this.txtItemCode);
+            this.groupControlInventory.Controls.Add(this.txtItemName);
+            this.groupControlInventory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControlInventory.Location = new System.Drawing.Point(0, 0);
+            this.groupControlInventory.Name = "groupControlInventory";
+            this.groupControlInventory.Size = new System.Drawing.Size(412, 114);
+            this.groupControlInventory.TabIndex = 0;
+            this.groupControlInventory.Text = "Inventory Info";
             // 
             // btnAddPicture
             // 
@@ -110,6 +110,7 @@
             this.btnAddPicture.Size = new System.Drawing.Size(67, 24);
             this.btnAddPicture.TabIndex = 7;
             this.btnAddPicture.Text = "Add Picture";
+            this.btnAddPicture.Click += new System.EventHandler(this.btnAddPicture_Click);
             // 
             // pbItemPicture
             // 
@@ -117,6 +118,7 @@
             this.pbItemPicture.Location = new System.Drawing.Point(306, 20);
             this.pbItemPicture.Name = "pbItemPicture";
             this.pbItemPicture.Size = new System.Drawing.Size(104, 92);
+            this.pbItemPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbItemPicture.TabIndex = 6;
             this.pbItemPicture.TabStop = false;
             // 
@@ -144,6 +146,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtItemCode.Size = new System.Drawing.Size(218, 20);
             this.txtItemCode.TabIndex = 0;
+            this.txtItemCode.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtItemCode_ButtonClick);
             // 
             // txtItemName
             // 
@@ -173,6 +176,7 @@
             this.btnClose.Size = new System.Drawing.Size(75, 50);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "Cancel";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnDelete
             // 
@@ -183,6 +187,7 @@
             this.btnDelete.Size = new System.Drawing.Size(75, 50);
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSave
             // 
@@ -193,32 +198,32 @@
             this.btnSave.Size = new System.Drawing.Size(75, 50);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // groupControl3
             // 
-            this.groupControl3.Controls.Add(this.groupControl7);
-            this.groupControl3.Controls.Add(this.groupControl6);
-            this.groupControl3.Controls.Add(this.groupControl5);
-            this.groupControl3.Controls.Add(this.groupControl4);
+            this.groupControl3.Controls.Add(this.groupControlTax);
+            this.groupControl3.Controls.Add(this.groupControlPrice);
+            this.groupControl3.Controls.Add(this.groupControlUnit);
+            this.groupControl3.Controls.Add(this.groupControlGroup);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 114);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(412, 209);
             this.groupControl3.TabIndex = 2;
             this.groupControl3.Text = "Inventory Item Detail";
-            this.groupControl3.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl3_Paint);
             // 
-            // groupControl7
+            // groupControlTax
             // 
-            this.groupControl7.Controls.Add(this.labelControl9);
-            this.groupControl7.Controls.Add(this.labelControl10);
-            this.groupControl7.Controls.Add(this.txtSaleTax);
-            this.groupControl7.Controls.Add(this.txtPurchaseTax);
-            this.groupControl7.Location = new System.Drawing.Point(261, 109);
-            this.groupControl7.Name = "groupControl7";
-            this.groupControl7.Size = new System.Drawing.Size(145, 80);
-            this.groupControl7.TabIndex = 2;
-            this.groupControl7.Text = "Tax Info";
+            this.groupControlTax.Controls.Add(this.labelControl9);
+            this.groupControlTax.Controls.Add(this.labelControl10);
+            this.groupControlTax.Controls.Add(this.txtSaleTax);
+            this.groupControlTax.Controls.Add(this.txtPurchaseTax);
+            this.groupControlTax.Location = new System.Drawing.Point(261, 109);
+            this.groupControlTax.Name = "groupControlTax";
+            this.groupControlTax.Size = new System.Drawing.Size(145, 80);
+            this.groupControlTax.TabIndex = 2;
+            this.groupControlTax.Text = "Tax Info";
             // 
             // labelControl9
             // 
@@ -240,7 +245,7 @@
             // 
             this.txtSaleTax.Location = new System.Drawing.Point(82, 51);
             this.txtSaleTax.Name = "txtSaleTax";
-            this.txtSaleTax.Properties.Mask.EditMask = "c";
+            this.txtSaleTax.Properties.Mask.EditMask = "P0";
             this.txtSaleTax.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtSaleTax.Size = new System.Drawing.Size(58, 20);
             this.txtSaleTax.TabIndex = 1;
@@ -249,23 +254,22 @@
             // 
             this.txtPurchaseTax.Location = new System.Drawing.Point(82, 25);
             this.txtPurchaseTax.Name = "txtPurchaseTax";
-            this.txtPurchaseTax.Properties.Mask.EditMask = "c";
+            this.txtPurchaseTax.Properties.Mask.EditMask = "P0";
             this.txtPurchaseTax.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtPurchaseTax.Size = new System.Drawing.Size(58, 20);
             this.txtPurchaseTax.TabIndex = 0;
             // 
-            // groupControl6
+            // groupControlPrice
             // 
-            this.groupControl6.Controls.Add(this.labelControl8);
-            this.groupControl6.Controls.Add(this.txtSalePrice);
-            this.groupControl6.Controls.Add(this.labelControl7);
-            this.groupControl6.Controls.Add(this.txtPurchasePrice);
-            this.groupControl6.Location = new System.Drawing.Point(261, 23);
-            this.groupControl6.Name = "groupControl6";
-            this.groupControl6.Size = new System.Drawing.Size(145, 80);
-            this.groupControl6.TabIndex = 1;
-            this.groupControl6.Text = "Price Info";
-            this.groupControl6.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl6_Paint);
+            this.groupControlPrice.Controls.Add(this.labelControl8);
+            this.groupControlPrice.Controls.Add(this.txtSalePrice);
+            this.groupControlPrice.Controls.Add(this.labelControl7);
+            this.groupControlPrice.Controls.Add(this.txtPurchasePrice);
+            this.groupControlPrice.Location = new System.Drawing.Point(261, 23);
+            this.groupControlPrice.Name = "groupControlPrice";
+            this.groupControlPrice.Size = new System.Drawing.Size(145, 80);
+            this.groupControlPrice.TabIndex = 1;
+            this.groupControlPrice.Text = "Price Info";
             // 
             // labelControl8
             // 
@@ -301,17 +305,17 @@
             this.txtPurchasePrice.Size = new System.Drawing.Size(58, 20);
             this.txtPurchasePrice.TabIndex = 0;
             // 
-            // groupControl5
+            // groupControlUnit
             // 
-            this.groupControl5.Controls.Add(this.labelControl5);
-            this.groupControl5.Controls.Add(this.labelControl6);
-            this.groupControl5.Controls.Add(this.textEdit2);
-            this.groupControl5.Controls.Add(this.txtUnit);
-            this.groupControl5.Location = new System.Drawing.Point(5, 109);
-            this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(250, 80);
-            this.groupControl5.TabIndex = 1;
-            this.groupControl5.Text = "Unit Info";
+            this.groupControlUnit.Controls.Add(this.labelControl5);
+            this.groupControlUnit.Controls.Add(this.labelControl6);
+            this.groupControlUnit.Controls.Add(this.txtBarcode);
+            this.groupControlUnit.Controls.Add(this.txtUnit);
+            this.groupControlUnit.Location = new System.Drawing.Point(5, 109);
+            this.groupControlUnit.Name = "groupControlUnit";
+            this.groupControlUnit.Size = new System.Drawing.Size(250, 80);
+            this.groupControlUnit.TabIndex = 1;
+            this.groupControlUnit.Text = "Unit Info";
             // 
             // labelControl5
             // 
@@ -329,12 +333,12 @@
             this.labelControl6.TabIndex = 8;
             this.labelControl6.Text = "Unit :";
             // 
-            // textEdit2
+            // txtBarcode
             // 
-            this.textEdit2.Location = new System.Drawing.Point(82, 51);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(150, 20);
-            this.textEdit2.TabIndex = 1;
+            this.txtBarcode.Location = new System.Drawing.Point(82, 51);
+            this.txtBarcode.Name = "txtBarcode";
+            this.txtBarcode.Size = new System.Drawing.Size(150, 20);
+            this.txtBarcode.TabIndex = 1;
             // 
             // txtUnit
             // 
@@ -342,20 +346,24 @@
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtUnit.Properties.Items.AddRange(new object[] {
+            "N",
+            "KG",
+            "M"});
             this.txtUnit.Size = new System.Drawing.Size(150, 20);
             this.txtUnit.TabIndex = 0;
             // 
-            // groupControl4
+            // groupControlGroup
             // 
-            this.groupControl4.Controls.Add(this.labelControl3);
-            this.groupControl4.Controls.Add(this.tctGroupName);
-            this.groupControl4.Controls.Add(this.labelControl4);
-            this.groupControl4.Controls.Add(this.txtGroupCode);
-            this.groupControl4.Location = new System.Drawing.Point(5, 23);
-            this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(250, 80);
-            this.groupControl4.TabIndex = 0;
-            this.groupControl4.Text = "Group Info";
+            this.groupControlGroup.Controls.Add(this.labelControl3);
+            this.groupControlGroup.Controls.Add(this.txtGroupName);
+            this.groupControlGroup.Controls.Add(this.labelControl4);
+            this.groupControlGroup.Controls.Add(this.txtGroupCode);
+            this.groupControlGroup.Location = new System.Drawing.Point(5, 23);
+            this.groupControlGroup.Name = "groupControlGroup";
+            this.groupControlGroup.Size = new System.Drawing.Size(250, 80);
+            this.groupControlGroup.TabIndex = 0;
+            this.groupControlGroup.Text = "Group Info";
             // 
             // labelControl3
             // 
@@ -365,12 +373,12 @@
             this.labelControl3.TabIndex = 4;
             this.labelControl3.Text = "Group Code :";
             // 
-            // tctGroupName
+            // txtGroupName
             // 
-            this.tctGroupName.Location = new System.Drawing.Point(82, 51);
-            this.tctGroupName.Name = "tctGroupName";
-            this.tctGroupName.Size = new System.Drawing.Size(150, 20);
-            this.tctGroupName.TabIndex = 1;
+            this.txtGroupName.Location = new System.Drawing.Point(82, 51);
+            this.txtGroupName.Name = "txtGroupName";
+            this.txtGroupName.Size = new System.Drawing.Size(150, 20);
+            this.txtGroupName.TabIndex = 1;
             // 
             // labelControl4
             // 
@@ -388,6 +396,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtGroupCode.Size = new System.Drawing.Size(150, 20);
             this.txtGroupCode.TabIndex = 0;
+            this.txtGroupCode.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtGroupCode_ButtonClick);
             // 
             // frmInventoryItem
             // 
@@ -396,7 +405,7 @@
             this.ClientSize = new System.Drawing.Size(412, 417);
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl2);
-            this.Controls.Add(this.groupControl1);
+            this.Controls.Add(this.groupControlInventory);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -404,9 +413,10 @@
             this.Name = "frmInventoryItem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventory Item";
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
+            this.Load += new System.EventHandler(this.frmInventoryItem_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControlInventory)).EndInit();
+            this.groupControlInventory.ResumeLayout(false);
+            this.groupControlInventory.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbItemPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtItemCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtItemName.Properties)).EndInit();
@@ -414,25 +424,25 @@
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).EndInit();
-            this.groupControl7.ResumeLayout(false);
-            this.groupControl7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControlTax)).EndInit();
+            this.groupControlTax.ResumeLayout(false);
+            this.groupControlTax.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSaleTax.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPurchaseTax.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
-            this.groupControl6.ResumeLayout(false);
-            this.groupControl6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControlPrice)).EndInit();
+            this.groupControlPrice.ResumeLayout(false);
+            this.groupControlPrice.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSalePrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPurchasePrice.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
-            this.groupControl5.ResumeLayout(false);
-            this.groupControl5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControlUnit)).EndInit();
+            this.groupControlUnit.ResumeLayout(false);
+            this.groupControlUnit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBarcode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
-            this.groupControl4.ResumeLayout(false);
-            this.groupControl4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tctGroupName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControlGroup)).EndInit();
+            this.groupControlGroup.ResumeLayout(false);
+            this.groupControlGroup.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGroupName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupCode.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -440,7 +450,7 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.GroupControl groupControlInventory;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.SimpleButton btnAddPicture;
@@ -452,17 +462,17 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.ButtonEdit txtItemCode;
         private DevExpress.XtraEditors.TextEdit txtItemName;
-        private DevExpress.XtraEditors.TextEdit tctGroupName;
+        private DevExpress.XtraEditors.TextEdit txtGroupName;
         private DevExpress.XtraEditors.SimpleButton btnClose;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.SimpleButton btnSave;
-        private DevExpress.XtraEditors.GroupControl groupControl7;
-        private DevExpress.XtraEditors.GroupControl groupControl6;
-        private DevExpress.XtraEditors.GroupControl groupControl5;
+        private DevExpress.XtraEditors.GroupControl groupControlTax;
+        private DevExpress.XtraEditors.GroupControl groupControlPrice;
+        private DevExpress.XtraEditors.GroupControl groupControlUnit;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.GroupControl groupControl4;
+        private DevExpress.XtraEditors.TextEdit txtBarcode;
+        private DevExpress.XtraEditors.GroupControl groupControlGroup;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.TextEdit txtSaleTax;

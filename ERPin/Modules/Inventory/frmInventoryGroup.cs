@@ -93,7 +93,7 @@ namespace ERPin.Modules.Stock
 
         void ClearRecord()
         {
-            var controls = groupControl1.Controls.OfType<TextEdit>();
+            List<TextEdit> controls = groupControl1.Controls.OfType<TextEdit>().ToList();
             foreach (var textEdit in controls)
             {
                 textEdit.Text = "";

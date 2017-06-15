@@ -9,7 +9,7 @@ namespace ERPin.Functions
 {
     class Forms
     {
-        public void InventoryList(bool Selection = false)
+        public int InventoryList(bool Selection = false)
         {
             frmInventoryList inventoryList = new frmInventoryList();
             if (Selection)
@@ -22,12 +22,15 @@ namespace ERPin.Functions
                 inventoryList.MdiParent = MainForm.ActiveForm;
                 inventoryList.Show();
             }
+            return MainForm.Transfer;
         }
 
-        public void InventoryGroup(bool Open = false)
+        public int InventoryGroup(bool Selection = false)
         {
             frmInventoryGroup inventoryGroup = new frmInventoryGroup();
+            if (Selection) inventoryGroup.Selection = Selection;
                 inventoryGroup.ShowDialog();
+            return MainForm.Transfer;
         }
 
         public void InventoryTransaction(bool Open = false)

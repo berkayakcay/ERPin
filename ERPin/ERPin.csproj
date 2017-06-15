@@ -89,7 +89,8 @@
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
     <Compile Include="Functions\Messages.cs" />
-    <Compile Include="Functions\Number.cs" />
+    <Compile Include="Functions\Numbers.cs" />
+    <Compile Include="Functions\Pictures.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
