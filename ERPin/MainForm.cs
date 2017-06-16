@@ -48,5 +48,25 @@ namespace ERPin
         {
             forms.InventoryTransaction();
         }
+
+        private void barBtnCurrAcc_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barBtnCurrAccGroup_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barBtnCurrAccList_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barBtnCurrAccTransaction_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
     }
 }

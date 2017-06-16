@@ -21,7 +21,7 @@ namespace ERPin.Modules.Stock
 
         public bool Selection = false;
         private int SelectedId = -1;
-        bool Edit = false;
+        private bool Edit = false;
 
         #endregion
 

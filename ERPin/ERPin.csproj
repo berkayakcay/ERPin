@@ -97,6 +97,30 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Current\frmCurrAccGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Current\frmCurrAccGroup.Designer.cs">
+      <DependentUpon>frmCurrAccGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Current\frmCurrAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Current\frmCurrAcc.Designer.cs">
+      <DependentUpon>frmCurrAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Current\frmCurrAccList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Current\frmCurrAccList.Designer.cs">
+      <DependentUpon>frmCurrAccList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Current\frmCurrAccTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Current\frmCurrAccTransaction.Designer.cs">
+      <DependentUpon>frmCurrAccTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Inventory\frmInventoryGroup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +149,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Current\frmCurrAccGroup.resx">
+      <DependentUpon>frmCurrAccGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Current\frmCurrAccList.resx">
+      <DependentUpon>frmCurrAccList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Inventory\frmInventoryGroup.resx">
       <DependentUpon>frmInventoryGroup.cs</DependentUpon>
