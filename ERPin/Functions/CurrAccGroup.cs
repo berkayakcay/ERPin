@@ -12,7 +12,7 @@ namespace ERPin.Functions
     using System;
     using System.Collections.Generic;
     
-    public partial class InventoryGroup
+    public partial class CurrAccGroup
     {
         public int Id { get; set; }
         public string GroupCode { get; set; }

@@ -27,5 +27,6 @@ namespace ERPin.Functions
     
         public virtual DbSet<Inventory> Inventory { get; set; }
         public virtual DbSet<InventoryGroup> InventoryGroup { get; set; }
+        public virtual DbSet<CurrAccGroup> CurrAccGroup { get; set; }
     }
 }

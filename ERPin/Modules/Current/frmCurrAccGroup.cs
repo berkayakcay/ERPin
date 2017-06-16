@@ -23,12 +23,15 @@ namespace ERPin.Modules.Current
         private int SelectionId = -1; 
         #endregion
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public frmCurrAccGroup()
         {
             InitializeComponent();
         }
 
+        
         #region Events
 
         /// <summary>

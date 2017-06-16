@@ -4,7 +4,21 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ERPinModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ERPinModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ERPin.dbo.CurrAccGroup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="CurrAccGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="GroupCode" Type="nvarchar" MaxLength="30" />
+          <Property Name="GroupName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedUserId" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="UpdatedUserId" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
+        </EntityType>
         <EntityType Name="Inventory">
           <Key>
             <PropertyRef Name="Id" />
@@ -32,13 +46,27 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="GroupCode" Type="nvarchar" MaxLength="30" />
           <Property Name="GroupName" Type="nvarchar" MaxLength="30" />
+          <Property Name="CreatedUserId" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="UpdatedUserId" Type="int" />
+          <Property Name="UpdatedDate" Type="datetime" />
         </EntityType>
         <EntityContainer Name="ERPinModelStoreContainer">
           <EntitySet Name="Inventory" EntityType="Self.Inventory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="InventoryGroup" EntityType="Self.InventoryGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CurrAccGroup" EntityType="Self.CurrAccGroup" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CurrAccGroup].[Id] AS [Id], 
+    [CurrAccGroup].[GroupCode] AS [GroupCode], 
+    [CurrAccGroup].[GroupName] AS [GroupName], 
+    [CurrAccGroup].[CreatedUserId] AS [CreatedUserId], 
+    [CurrAccGroup].[CreatedDate] AS [CreatedDate], 
+    [CurrAccGroup].[UpdatedUserId] AS [UpdatedUserId], 
+    [CurrAccGroup].[UpdatedDate] AS [UpdatedDate]
+    FROM [dbo].[CurrAccGroup] AS [CurrAccGroup]</DefiningQuery>
+          </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ERPinModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -69,11 +97,28 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="GroupCode" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="GroupName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedUserId" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedUserId" Type="Int32" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityContainer Name="ERPinEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Inventory" EntityType="Self.Inventory" />
           <EntitySet Name="InventoryGroup" EntityType="Self.InventoryGroup" />
+          <EntitySet Name="CurrAccGroup" EntityType="ERPinModel.CurrAccGroup" />
         </EntityContainer>
+        <EntityType Name="CurrAccGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="GroupCode" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="GroupName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedUserId" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedUserId" Type="Int32" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -104,9 +149,26 @@
           <EntitySetMapping Name="InventoryGroup">
             <EntityTypeMapping TypeName="ERPinModel.InventoryGroup">
               <MappingFragment StoreEntitySet="InventoryGroup">
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="UpdatedUserId" ColumnName="UpdatedUserId" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedUserId" ColumnName="CreatedUserId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="GroupCode" ColumnName="GroupCode" />
                 <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CurrAccGroup">
+            <EntityTypeMapping TypeName="ERPinModel.CurrAccGroup">
+              <MappingFragment StoreEntitySet="CurrAccGroup">
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="UpdatedUserId" ColumnName="UpdatedUserId" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedUserId" ColumnName="CreatedUserId" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="GroupCode" ColumnName="GroupCode" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
