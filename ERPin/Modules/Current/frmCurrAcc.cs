@@ -17,5 +17,10 @@ namespace ERPin.Modules.Current
         {
             InitializeComponent();
         }
+
+        private void groupControl2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

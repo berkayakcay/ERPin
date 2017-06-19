@@ -153,6 +153,9 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Current\frmCurrAcc.resx">
+      <DependentUpon>frmCurrAcc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Current\frmCurrAccGroup.resx">
       <DependentUpon>frmCurrAccGroup.cs</DependentUpon>
     </EmbeddedResource>

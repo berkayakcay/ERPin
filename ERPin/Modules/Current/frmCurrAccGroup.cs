@@ -18,7 +18,7 @@ namespace ERPin.Modules.Current
         Functions.ERPinEntities db = new ERPinEntities();
         Functions.Messages messages = new Messages();
 
-        public bool Selections = false;
+        public bool Selection = false;
         private bool Edit = false;
         private int SelectionId = -1; 
         #endregion
@@ -30,8 +30,7 @@ namespace ERPin.Modules.Current
         {
             InitializeComponent();
         }
-
-        
+ 
         #region Events
 
         /// <summary>
@@ -119,6 +118,9 @@ namespace ERPin.Modules.Current
             catch (Exception e)
             {
                 messages.Error(e);
+                Edit = false;
+                SelectionId = -1;
+                
             }
         }
         
