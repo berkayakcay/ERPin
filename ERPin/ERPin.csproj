@@ -66,6 +66,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Functions\CurrAcc.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
     <Compile Include="Functions\CurrAccGroup.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
@@ -94,6 +97,9 @@
     <Compile Include="Functions\Messages.cs" />
     <Compile Include="Functions\Numbers.cs" />
     <Compile Include="Functions\Pictures.cs" />
+    <Compile Include="Functions\sysdiagrams.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

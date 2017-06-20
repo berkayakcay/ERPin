@@ -31,89 +31,89 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCurrAcc));
             this.groupControlCurrAccSum = new DevExpress.XtraEditors.GroupControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
+            this.txtGroupName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this.txtTaxNumber = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtTaxOffice = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCurrAccName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.groupControlCurrAccInfo = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAddPicture = new DevExpress.XtraEditors.SimpleButton();
+            this.pbCurrAccPicture = new System.Windows.Forms.PictureBox();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit15 = new DevExpress.XtraEditors.TextEdit();
+            this.txtContactMail = new DevExpress.XtraEditors.TextEdit();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit16 = new DevExpress.XtraEditors.TextEdit();
+            this.txtContact = new DevExpress.XtraEditors.TextEdit();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit17 = new DevExpress.XtraEditors.TextEdit();
+            this.txtEmail = new DevExpress.XtraEditors.TextEdit();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit18 = new DevExpress.XtraEditors.TextEdit();
+            this.txtWeb = new DevExpress.XtraEditors.TextEdit();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit14 = new DevExpress.XtraEditors.TextEdit();
+            this.txtFax2 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit13 = new DevExpress.XtraEditors.TextEdit();
+            this.txtFax1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit12 = new DevExpress.XtraEditors.TextEdit();
+            this.txtPhone2 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit11 = new DevExpress.XtraEditors.TextEdit();
+            this.txtPhone1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit9 = new DevExpress.XtraEditors.TextEdit();
+            this.txtDistrict = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCity = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCountry = new DevExpress.XtraEditors.TextEdit();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit10 = new DevExpress.XtraEditors.MemoEdit();
+            this.txtAddress = new DevExpress.XtraEditors.MemoEdit();
+            this.txtGroupCode = new DevExpress.XtraEditors.ButtonEdit();
+            this.txtCurrAccCode = new DevExpress.XtraEditors.ButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlCurrAccSum)).BeginInit();
             this.groupControlCurrAccSum.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGroupName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTaxNumber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTaxOffice.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCurrAccName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlCurrAccInfo)).BeginInit();
             this.groupControlCurrAccInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit15.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit16.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit17.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit18.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit14.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCurrAccPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContactMail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContact.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWeb.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFax2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFax1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPhone2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPhone1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDistrict.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGroupCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCurrAccCode.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControlCurrAccSum
             // 
             this.groupControlCurrAccSum.Controls.Add(this.labelControl6);
-            this.groupControlCurrAccSum.Controls.Add(this.textEdit6);
+            this.groupControlCurrAccSum.Controls.Add(this.txtGroupName);
             this.groupControlCurrAccSum.Controls.Add(this.labelControl5);
-            this.groupControlCurrAccSum.Controls.Add(this.textEdit5);
+            this.groupControlCurrAccSum.Controls.Add(this.txtTaxNumber);
             this.groupControlCurrAccSum.Controls.Add(this.labelControl4);
-            this.groupControlCurrAccSum.Controls.Add(this.textEdit4);
+            this.groupControlCurrAccSum.Controls.Add(this.txtTaxOffice);
             this.groupControlCurrAccSum.Controls.Add(this.labelControl3);
-            this.groupControlCurrAccSum.Controls.Add(this.textEdit3);
             this.groupControlCurrAccSum.Controls.Add(this.labelControl2);
-            this.groupControlCurrAccSum.Controls.Add(this.textEdit2);
+            this.groupControlCurrAccSum.Controls.Add(this.txtCurrAccName);
             this.groupControlCurrAccSum.Controls.Add(this.labelControl1);
-            this.groupControlCurrAccSum.Controls.Add(this.textEdit1);
+            this.groupControlCurrAccSum.Controls.Add(this.txtGroupCode);
+            this.groupControlCurrAccSum.Controls.Add(this.txtCurrAccCode);
             this.groupControlCurrAccSum.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControlCurrAccSum.Location = new System.Drawing.Point(0, 0);
             this.groupControlCurrAccSum.Name = "groupControlCurrAccSum";
@@ -126,16 +126,16 @@
             // 
             this.labelControl6.Location = new System.Drawing.Point(304, 88);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(64, 13);
+            this.labelControl6.Size = new System.Drawing.Size(66, 13);
             this.labelControl6.TabIndex = 11;
-            this.labelControl6.Text = "Group Code :";
+            this.labelControl6.Text = "Group Name :";
             // 
-            // textEdit6
+            // txtGroupName
             // 
-            this.textEdit6.Location = new System.Drawing.Point(373, 84);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Size = new System.Drawing.Size(186, 20);
-            this.textEdit6.TabIndex = 10;
+            this.txtGroupName.Location = new System.Drawing.Point(373, 84);
+            this.txtGroupName.Name = "txtGroupName";
+            this.txtGroupName.Size = new System.Drawing.Size(186, 20);
+            this.txtGroupName.TabIndex = 10;
             // 
             // labelControl5
             // 
@@ -145,12 +145,12 @@
             this.labelControl5.TabIndex = 9;
             this.labelControl5.Text = "Tax Number :";
             // 
-            // textEdit5
+            // txtTaxNumber
             // 
-            this.textEdit5.Location = new System.Drawing.Point(373, 58);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(186, 20);
-            this.textEdit5.TabIndex = 8;
+            this.txtTaxNumber.Location = new System.Drawing.Point(373, 58);
+            this.txtTaxNumber.Name = "txtTaxNumber";
+            this.txtTaxNumber.Size = new System.Drawing.Size(186, 20);
+            this.txtTaxNumber.TabIndex = 8;
             // 
             // labelControl4
             // 
@@ -160,27 +160,20 @@
             this.labelControl4.TabIndex = 7;
             this.labelControl4.Text = "Tax Office :";
             // 
-            // textEdit4
+            // txtTaxOffice
             // 
-            this.textEdit4.Location = new System.Drawing.Point(373, 32);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(186, 20);
-            this.textEdit4.TabIndex = 6;
+            this.txtTaxOffice.Location = new System.Drawing.Point(373, 32);
+            this.txtTaxOffice.Name = "txtTaxOffice";
+            this.txtTaxOffice.Size = new System.Drawing.Size(186, 20);
+            this.txtTaxOffice.TabIndex = 6;
             // 
             // labelControl3
             // 
             this.labelControl3.Location = new System.Drawing.Point(12, 88);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(66, 13);
+            this.labelControl3.Size = new System.Drawing.Size(64, 13);
             this.labelControl3.TabIndex = 5;
-            this.labelControl3.Text = "Group Name :";
-            // 
-            // textEdit3
-            // 
-            this.textEdit3.Location = new System.Drawing.Point(84, 84);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(186, 20);
-            this.textEdit3.TabIndex = 4;
+            this.labelControl3.Text = "Group Code :";
             // 
             // labelControl2
             // 
@@ -190,12 +183,12 @@
             this.labelControl2.TabIndex = 3;
             this.labelControl2.Text = "Name :";
             // 
-            // textEdit2
+            // txtCurrAccName
             // 
-            this.textEdit2.Location = new System.Drawing.Point(84, 58);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(186, 20);
-            this.textEdit2.TabIndex = 2;
+            this.txtCurrAccName.Location = new System.Drawing.Point(84, 58);
+            this.txtCurrAccName.Name = "txtCurrAccName";
+            this.txtCurrAccName.Size = new System.Drawing.Size(186, 20);
+            this.txtCurrAccName.TabIndex = 2;
             // 
             // labelControl1
             // 
@@ -205,42 +198,35 @@
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Code :";
             // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(84, 32);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(186, 20);
-            this.textEdit1.TabIndex = 0;
-            // 
             // groupControlCurrAccInfo
             // 
-            this.groupControlCurrAccInfo.Controls.Add(this.simpleButton1);
-            this.groupControlCurrAccInfo.Controls.Add(this.pictureBox1);
+            this.groupControlCurrAccInfo.Controls.Add(this.btnAddPicture);
+            this.groupControlCurrAccInfo.Controls.Add(this.pbCurrAccPicture);
             this.groupControlCurrAccInfo.Controls.Add(this.labelControl15);
-            this.groupControlCurrAccInfo.Controls.Add(this.textEdit15);
+            this.groupControlCurrAccInfo.Controls.Add(this.txtContactMail);
             this.groupControlCurrAccInfo.Controls.Add(this.labelControl16);
-            this.groupControlCurrAccInfo.Controls.Add(this.textEdit16);
+            this.groupControlCurrAccInfo.Controls.Add(this.txtContact);
             this.groupControlCurrAccInfo.Controls.Add(this.labelControl17);
-            this.groupControlCurrAccInfo.Controls.Add(this.textEdit17);
+            this.groupControlCurrAccInfo.Controls.Add(this.txtEmail);
             this.groupControlCurrAccInfo.Controls.Add(this.labelControl18);
-            this.groupControlCurrAccInfo.Controls.Add(this.textEdit18);
+            this.groupControlCurrAccInfo.Controls.Add(this.txtWeb);
             this.groupControlCurrAccInfo.Controls.Add(this.labelControl14);
-            this.groupControlCurrAccInfo.Controls.Add(this.textEdit14);
+            this.groupControlCurrAccInfo.Controls.Add(this.txtFax2);
             this.groupControlCurrAccInfo.Controls.Add(this.labelControl13);
-            this.groupControlCurrAccInfo.Controls.Add(this.textEdit13);
+            this.groupControlCurrAccInfo.Controls.Add(this.txtFax1);
             this.groupControlCurrAccInfo.Controls.Add(this.labelControl12);
-            this.groupControlCurrAccInfo.Controls.Add(this.textEdit12);
+            this.groupControlCurrAccInfo.Controls.Add(this.txtPhone2);
             this.groupControlCurrAccInfo.Controls.Add(this.labelControl11);
-            this.groupControlCurrAccInfo.Controls.Add(this.textEdit11);
+            this.groupControlCurrAccInfo.Controls.Add(this.txtPhone1);
             this.groupControlCurrAccInfo.Controls.Add(this.labelControl10);
             this.groupControlCurrAccInfo.Controls.Add(this.labelControl9);
-            this.groupControlCurrAccInfo.Controls.Add(this.textEdit9);
+            this.groupControlCurrAccInfo.Controls.Add(this.txtDistrict);
             this.groupControlCurrAccInfo.Controls.Add(this.labelControl8);
-            this.groupControlCurrAccInfo.Controls.Add(this.textEdit8);
+            this.groupControlCurrAccInfo.Controls.Add(this.txtCity);
             this.groupControlCurrAccInfo.Controls.Add(this.labelControl7);
-            this.groupControlCurrAccInfo.Controls.Add(this.textEdit7);
+            this.groupControlCurrAccInfo.Controls.Add(this.txtCountry);
             this.groupControlCurrAccInfo.Controls.Add(this.groupControl3);
-            this.groupControlCurrAccInfo.Controls.Add(this.textEdit10);
+            this.groupControlCurrAccInfo.Controls.Add(this.txtAddress);
             this.groupControlCurrAccInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControlCurrAccInfo.Location = new System.Drawing.Point(0, 122);
             this.groupControlCurrAccInfo.Name = "groupControlCurrAccInfo";
@@ -249,143 +235,143 @@
             this.groupControlCurrAccInfo.Text = "Current Account Info";
             this.groupControlCurrAccInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl2_Paint);
             // 
-            // simpleButton1
+            // btnAddPicture
             // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(134, 297);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(136, 38);
-            this.simpleButton1.TabIndex = 35;
-            this.simpleButton1.Text = "Add Picture";
+            this.btnAddPicture.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnAddPicture.Location = new System.Drawing.Point(134, 297);
+            this.btnAddPicture.Name = "btnAddPicture";
+            this.btnAddPicture.Size = new System.Drawing.Size(136, 38);
+            this.btnAddPicture.TabIndex = 35;
+            this.btnAddPicture.Text = "Add Picture";
             // 
-            // pictureBox1
+            // pbCurrAccPicture
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(134, 175);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(136, 116);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 34;
-            this.pictureBox1.TabStop = false;
+            this.pbCurrAccPicture.Location = new System.Drawing.Point(134, 175);
+            this.pbCurrAccPicture.Name = "pbCurrAccPicture";
+            this.pbCurrAccPicture.Size = new System.Drawing.Size(136, 116);
+            this.pbCurrAccPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbCurrAccPicture.TabIndex = 34;
+            this.pbCurrAccPicture.TabStop = false;
             // 
             // labelControl15
             // 
-            this.labelControl15.Location = new System.Drawing.Point(290, 114);
+            this.labelControl15.Location = new System.Drawing.Point(304, 114);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(66, 13);
             this.labelControl15.TabIndex = 33;
             this.labelControl15.Text = "Contact Mail :";
             // 
-            // textEdit15
+            // txtContactMail
             // 
-            this.textEdit15.Location = new System.Drawing.Point(373, 110);
-            this.textEdit15.Name = "textEdit15";
-            this.textEdit15.Size = new System.Drawing.Size(186, 20);
-            this.textEdit15.TabIndex = 32;
+            this.txtContactMail.Location = new System.Drawing.Point(373, 110);
+            this.txtContactMail.Name = "txtContactMail";
+            this.txtContactMail.Size = new System.Drawing.Size(186, 20);
+            this.txtContactMail.TabIndex = 32;
             // 
             // labelControl16
             // 
-            this.labelControl16.Location = new System.Drawing.Point(290, 88);
+            this.labelControl16.Location = new System.Drawing.Point(304, 88);
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Size = new System.Drawing.Size(45, 13);
             this.labelControl16.TabIndex = 31;
             this.labelControl16.Text = "Contact :";
             // 
-            // textEdit16
+            // txtContact
             // 
-            this.textEdit16.Location = new System.Drawing.Point(373, 84);
-            this.textEdit16.Name = "textEdit16";
-            this.textEdit16.Size = new System.Drawing.Size(186, 20);
-            this.textEdit16.TabIndex = 30;
+            this.txtContact.Location = new System.Drawing.Point(373, 84);
+            this.txtContact.Name = "txtContact";
+            this.txtContact.Size = new System.Drawing.Size(186, 20);
+            this.txtContact.TabIndex = 30;
             // 
             // labelControl17
             // 
-            this.labelControl17.Location = new System.Drawing.Point(290, 62);
+            this.labelControl17.Location = new System.Drawing.Point(304, 62);
             this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(67, 13);
+            this.labelControl17.Size = new System.Drawing.Size(31, 13);
             this.labelControl17.TabIndex = 29;
-            this.labelControl17.Text = "Mail Address :";
+            this.labelControl17.Text = "Email :";
             // 
-            // textEdit17
+            // txtEmail
             // 
-            this.textEdit17.Location = new System.Drawing.Point(373, 58);
-            this.textEdit17.Name = "textEdit17";
-            this.textEdit17.Size = new System.Drawing.Size(186, 20);
-            this.textEdit17.TabIndex = 28;
+            this.txtEmail.Location = new System.Drawing.Point(373, 58);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(186, 20);
+            this.txtEmail.TabIndex = 28;
             // 
             // labelControl18
             // 
-            this.labelControl18.Location = new System.Drawing.Point(290, 36);
+            this.labelControl18.Location = new System.Drawing.Point(304, 36);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(71, 13);
+            this.labelControl18.Size = new System.Drawing.Size(29, 13);
             this.labelControl18.TabIndex = 27;
-            this.labelControl18.Text = "Web Address :";
+            this.labelControl18.Text = "Web :";
             // 
-            // textEdit18
+            // txtWeb
             // 
-            this.textEdit18.Location = new System.Drawing.Point(373, 32);
-            this.textEdit18.Name = "textEdit18";
-            this.textEdit18.Size = new System.Drawing.Size(186, 20);
-            this.textEdit18.TabIndex = 26;
+            this.txtWeb.Location = new System.Drawing.Point(373, 32);
+            this.txtWeb.Name = "txtWeb";
+            this.txtWeb.Size = new System.Drawing.Size(186, 20);
+            this.txtWeb.TabIndex = 26;
             // 
             // labelControl14
             // 
-            this.labelControl14.Location = new System.Drawing.Point(290, 219);
+            this.labelControl14.Location = new System.Drawing.Point(304, 219);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(34, 13);
             this.labelControl14.TabIndex = 25;
             this.labelControl14.Text = "Fax 2 :";
             // 
-            // textEdit14
+            // txtFax2
             // 
-            this.textEdit14.Location = new System.Drawing.Point(373, 215);
-            this.textEdit14.Name = "textEdit14";
-            this.textEdit14.Size = new System.Drawing.Size(186, 20);
-            this.textEdit14.TabIndex = 24;
+            this.txtFax2.Location = new System.Drawing.Point(373, 215);
+            this.txtFax2.Name = "txtFax2";
+            this.txtFax2.Size = new System.Drawing.Size(186, 20);
+            this.txtFax2.TabIndex = 24;
             // 
             // labelControl13
             // 
-            this.labelControl13.Location = new System.Drawing.Point(290, 192);
+            this.labelControl13.Location = new System.Drawing.Point(304, 192);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(34, 13);
             this.labelControl13.TabIndex = 23;
             this.labelControl13.Text = "Fax 1 :";
             // 
-            // textEdit13
+            // txtFax1
             // 
-            this.textEdit13.Location = new System.Drawing.Point(373, 188);
-            this.textEdit13.Name = "textEdit13";
-            this.textEdit13.Size = new System.Drawing.Size(186, 20);
-            this.textEdit13.TabIndex = 22;
+            this.txtFax1.Location = new System.Drawing.Point(373, 188);
+            this.txtFax1.Name = "txtFax1";
+            this.txtFax1.Size = new System.Drawing.Size(186, 20);
+            this.txtFax1.TabIndex = 22;
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(290, 166);
+            this.labelControl12.Location = new System.Drawing.Point(304, 166);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(66, 13);
+            this.labelControl12.Size = new System.Drawing.Size(46, 13);
             this.labelControl12.TabIndex = 21;
-            this.labelControl12.Text = "Telephone 2 :";
+            this.labelControl12.Text = "Phone 2 :";
             // 
-            // textEdit12
+            // txtPhone2
             // 
-            this.textEdit12.Location = new System.Drawing.Point(373, 162);
-            this.textEdit12.Name = "textEdit12";
-            this.textEdit12.Size = new System.Drawing.Size(186, 20);
-            this.textEdit12.TabIndex = 20;
+            this.txtPhone2.Location = new System.Drawing.Point(373, 162);
+            this.txtPhone2.Name = "txtPhone2";
+            this.txtPhone2.Size = new System.Drawing.Size(186, 20);
+            this.txtPhone2.TabIndex = 20;
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(290, 140);
+            this.labelControl11.Location = new System.Drawing.Point(304, 140);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(66, 13);
+            this.labelControl11.Size = new System.Drawing.Size(46, 13);
             this.labelControl11.TabIndex = 19;
-            this.labelControl11.Text = "Telephone 1 :";
+            this.labelControl11.Text = "Phone 1 :";
             // 
-            // textEdit11
+            // txtPhone1
             // 
-            this.textEdit11.Location = new System.Drawing.Point(373, 136);
-            this.textEdit11.Name = "textEdit11";
-            this.textEdit11.Size = new System.Drawing.Size(186, 20);
-            this.textEdit11.TabIndex = 18;
+            this.txtPhone1.Location = new System.Drawing.Point(373, 136);
+            this.txtPhone1.Name = "txtPhone1";
+            this.txtPhone1.Size = new System.Drawing.Size(186, 20);
+            this.txtPhone1.TabIndex = 18;
             // 
             // labelControl10
             // 
@@ -403,12 +389,12 @@
             this.labelControl9.TabIndex = 15;
             this.labelControl9.Text = "District :";
             // 
-            // textEdit9
+            // txtDistrict
             // 
-            this.textEdit9.Location = new System.Drawing.Point(84, 84);
-            this.textEdit9.Name = "textEdit9";
-            this.textEdit9.Size = new System.Drawing.Size(186, 20);
-            this.textEdit9.TabIndex = 14;
+            this.txtDistrict.Location = new System.Drawing.Point(84, 84);
+            this.txtDistrict.Name = "txtDistrict";
+            this.txtDistrict.Size = new System.Drawing.Size(186, 20);
+            this.txtDistrict.TabIndex = 14;
             // 
             // labelControl8
             // 
@@ -418,12 +404,12 @@
             this.labelControl8.TabIndex = 13;
             this.labelControl8.Text = "City :";
             // 
-            // textEdit8
+            // txtCity
             // 
-            this.textEdit8.Location = new System.Drawing.Point(84, 58);
-            this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Size = new System.Drawing.Size(186, 20);
-            this.textEdit8.TabIndex = 12;
+            this.txtCity.Location = new System.Drawing.Point(84, 58);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(186, 20);
+            this.txtCity.TabIndex = 12;
             // 
             // labelControl7
             // 
@@ -433,12 +419,12 @@
             this.labelControl7.TabIndex = 11;
             this.labelControl7.Text = "Country :";
             // 
-            // textEdit7
+            // txtCountry
             // 
-            this.textEdit7.Location = new System.Drawing.Point(84, 32);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Size = new System.Drawing.Size(186, 20);
-            this.textEdit7.TabIndex = 10;
+            this.txtCountry.Location = new System.Drawing.Point(84, 32);
+            this.txtCountry.Name = "txtCountry";
+            this.txtCountry.Size = new System.Drawing.Size(186, 20);
+            this.txtCountry.TabIndex = 10;
             // 
             // groupControl3
             // 
@@ -482,12 +468,30 @@
             this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Save";
             // 
-            // textEdit10
+            // txtAddress
             // 
-            this.textEdit10.Location = new System.Drawing.Point(84, 113);
-            this.textEdit10.Name = "textEdit10";
-            this.textEdit10.Size = new System.Drawing.Size(186, 56);
-            this.textEdit10.TabIndex = 16;
+            this.txtAddress.Location = new System.Drawing.Point(84, 113);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(186, 56);
+            this.txtAddress.TabIndex = 16;
+            // 
+            // txtGroupCode
+            // 
+            this.txtGroupCode.Location = new System.Drawing.Point(84, 84);
+            this.txtGroupCode.Name = "txtGroupCode";
+            this.txtGroupCode.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtGroupCode.Size = new System.Drawing.Size(186, 20);
+            this.txtGroupCode.TabIndex = 4;
+            // 
+            // txtCurrAccCode
+            // 
+            this.txtCurrAccCode.Location = new System.Drawing.Point(84, 32);
+            this.txtCurrAccCode.Name = "txtCurrAccCode";
+            this.txtCurrAccCode.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtCurrAccCode.Size = new System.Drawing.Size(186, 20);
+            this.txtCurrAccCode.TabIndex = 0;
             // 
             // frmCurrAcc
             // 
@@ -502,33 +506,34 @@
             this.Name = "frmCurrAcc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Current Account";
+            this.Load += new System.EventHandler(this.frmCurrAcc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControlCurrAccSum)).EndInit();
             this.groupControlCurrAccSum.ResumeLayout(false);
             this.groupControlCurrAccSum.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGroupName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTaxNumber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTaxOffice.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCurrAccName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlCurrAccInfo)).EndInit();
             this.groupControlCurrAccInfo.ResumeLayout(false);
             this.groupControlCurrAccInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit15.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit16.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit17.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit18.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit14.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCurrAccPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContactMail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContact.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWeb.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFax2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFax1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPhone2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPhone1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDistrict.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGroupCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCurrAccCode.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -538,46 +543,46 @@
         private DevExpress.XtraEditors.GroupControl groupControlCurrAccSum;
         private DevExpress.XtraEditors.GroupControl groupControlCurrAccInfo;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
+        private DevExpress.XtraEditors.TextEdit txtGroupName;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
+        private DevExpress.XtraEditors.TextEdit txtTaxNumber;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.TextEdit txtTaxOffice;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtCurrAccName;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl15;
-        private DevExpress.XtraEditors.TextEdit textEdit15;
+        private DevExpress.XtraEditors.TextEdit txtContactMail;
         private DevExpress.XtraEditors.LabelControl labelControl16;
-        private DevExpress.XtraEditors.TextEdit textEdit16;
+        private DevExpress.XtraEditors.TextEdit txtContact;
         private DevExpress.XtraEditors.LabelControl labelControl17;
-        private DevExpress.XtraEditors.TextEdit textEdit17;
+        private DevExpress.XtraEditors.TextEdit txtEmail;
         private DevExpress.XtraEditors.LabelControl labelControl18;
-        private DevExpress.XtraEditors.TextEdit textEdit18;
+        private DevExpress.XtraEditors.TextEdit txtWeb;
         private DevExpress.XtraEditors.LabelControl labelControl14;
-        private DevExpress.XtraEditors.TextEdit textEdit14;
+        private DevExpress.XtraEditors.TextEdit txtFax2;
         private DevExpress.XtraEditors.LabelControl labelControl13;
-        private DevExpress.XtraEditors.TextEdit textEdit13;
+        private DevExpress.XtraEditors.TextEdit txtFax1;
         private DevExpress.XtraEditors.LabelControl labelControl12;
-        private DevExpress.XtraEditors.TextEdit textEdit12;
+        private DevExpress.XtraEditors.TextEdit txtPhone2;
         private DevExpress.XtraEditors.LabelControl labelControl11;
-        private DevExpress.XtraEditors.TextEdit textEdit11;
+        private DevExpress.XtraEditors.TextEdit txtPhone1;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.TextEdit textEdit9;
+        private DevExpress.XtraEditors.TextEdit txtDistrict;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.TextEdit textEdit8;
+        private DevExpress.XtraEditors.TextEdit txtCity;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.TextEdit textEdit7;
+        private DevExpress.XtraEditors.TextEdit txtCountry;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.SimpleButton btnClose;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.SimpleButton btnSave;
-        private DevExpress.XtraEditors.MemoEdit textEdit10;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private DevExpress.XtraEditors.MemoEdit txtAddress;
+        private DevExpress.XtraEditors.SimpleButton btnAddPicture;
+        private System.Windows.Forms.PictureBox pbCurrAccPicture;
+        private DevExpress.XtraEditors.ButtonEdit txtGroupCode;
+        private DevExpress.XtraEditors.ButtonEdit txtCurrAccCode;
     }
 }

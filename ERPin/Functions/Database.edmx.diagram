@@ -4,10 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d6e6fdf575b044cf882b7c5a881e85e4" Name="Diagram1">
+      <Diagram DiagramId="d6e6fdf575b044cf882b7c5a881e85e4" Name="Diagram1" ZoomLevel="113" ShowGrid="true" DisplayType="true">
         <EntityTypeShape EntityType="ERPinModel.Inventory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ERPinModel.InventoryGroup" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ERPinModel.CurrAccGroup" Width="1.5" PointX="3.375" PointY="4.75" />
+        <EntityTypeShape EntityType="ERPinModel.CurrAccGroup" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPinModel.CurrAcc" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPinModel.sysdiagrams" Width="1.5" PointX="3.375" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

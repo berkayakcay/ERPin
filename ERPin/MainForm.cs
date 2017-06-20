@@ -56,7 +56,7 @@ namespace ERPin
 
         private void barBtnCurrAccGroup_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            forms.CurrAccGroup();
         }
 
         private void barBtnCurrAccList_ItemClick(object sender, ItemClickEventArgs e)

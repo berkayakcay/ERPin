@@ -22,5 +22,10 @@ namespace ERPin.Modules.Current
         {
 
         }
+
+        private void frmCurrAcc_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

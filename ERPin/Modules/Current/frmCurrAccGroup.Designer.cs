@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.gcCurrAccInfo = new DevExpress.XtraEditors.GroupControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtGroupName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -43,8 +43,8 @@
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcCurrAccInfo)).BeginInit();
+            this.gcCurrAccInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -55,18 +55,18 @@
             this.groupControl3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupControl1
+            // gcCurrAccInfo
             // 
-            this.groupControl1.Controls.Add(this.labelControl2);
-            this.groupControl1.Controls.Add(this.txtGroupName);
-            this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Controls.Add(this.txtGroupCode);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl1.Location = new System.Drawing.Point(0, 0);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(260, 92);
-            this.groupControl1.TabIndex = 2;
-            this.groupControl1.Text = "Current Account Info";
+            this.gcCurrAccInfo.Controls.Add(this.labelControl2);
+            this.gcCurrAccInfo.Controls.Add(this.txtGroupName);
+            this.gcCurrAccInfo.Controls.Add(this.labelControl1);
+            this.gcCurrAccInfo.Controls.Add(this.txtGroupCode);
+            this.gcCurrAccInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gcCurrAccInfo.Location = new System.Drawing.Point(0, 0);
+            this.gcCurrAccInfo.Name = "gcCurrAccInfo";
+            this.gcCurrAccInfo.Size = new System.Drawing.Size(260, 92);
+            this.gcCurrAccInfo.TabIndex = 2;
+            this.gcCurrAccInfo.Text = "Current Account Info";
             // 
             // labelControl2
             // 
@@ -102,9 +102,9 @@
             // 
             this.groupControl2.Controls.Add(this.gcListe);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(0, 0);
+            this.groupControl2.Location = new System.Drawing.Point(0, 92);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(260, 323);
+            this.groupControl2.Size = new System.Drawing.Size(260, 231);
             this.groupControl2.TabIndex = 3;
             // 
             // gcListe
@@ -113,7 +113,7 @@
             this.gcListe.Location = new System.Drawing.Point(2, 20);
             this.gcListe.MainView = this.gridView1;
             this.gcListe.Name = "gcListe";
-            this.gcListe.Size = new System.Drawing.Size(256, 301);
+            this.gcListe.Size = new System.Drawing.Size(256, 209);
             this.gcListe.TabIndex = 0;
             this.gcListe.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -127,6 +127,7 @@
             this.gridView1.GridControl = this.gcListe;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // Id
             // 
@@ -207,15 +208,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(260, 409);
-            this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupControl2);
+            this.Controls.Add(this.gcCurrAccInfo);
             this.Controls.Add(this.groupControl3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCurrAccGroup";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CurrAccGroup";
             this.Load += new System.EventHandler(this.frmCurrAccGroup_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcCurrAccInfo)).EndInit();
+            this.gcCurrAccInfo.ResumeLayout(false);
+            this.gcCurrAccInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
@@ -230,7 +235,7 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.GroupControl gcCurrAccInfo;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit txtGroupName;
         private DevExpress.XtraEditors.LabelControl labelControl1;

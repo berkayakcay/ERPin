@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ERPin.Modules.Current;
 using ERPin.Modules.Stock;
 
 namespace ERPin.Functions
 {
     class Forms
     {
+        #region Inventory
         public int InventoryList(bool Selection = false)
         {
             frmInventoryList inventoryList = new frmInventoryList();
@@ -29,13 +31,13 @@ namespace ERPin.Functions
         {
             frmInventoryGroup inventoryGroup = new frmInventoryGroup();
             if (Selection) inventoryGroup.Selection = Selection;
-                inventoryGroup.ShowDialog();
+            inventoryGroup.ShowDialog();
             return MainForm.Transfer;
         }
 
         public void InventoryTransaction(bool Open = false)
         {
-            
+
         }
 
         public void InventoryItem(bool Open = false)
@@ -43,5 +45,20 @@ namespace ERPin.Functions
             frmInventoryItem inventoryItem = new frmInventoryItem();
             inventoryItem.ShowDialog();
         }
+        #endregion
+
+        #region Current Account
+
+        public int CurrAccGroup(bool Selection = false)
+        {
+            Modules.Current.frmCurrAccGroup currAccGroup = new frmCurrAccGroup();
+            if (Selection)
+            {
+                currAccGroup.Selection = Selection;
+            }
+            currAccGroup.ShowDialog();
+            return MainForm.Transfer;
+        }
+        #endregion
     }
 }

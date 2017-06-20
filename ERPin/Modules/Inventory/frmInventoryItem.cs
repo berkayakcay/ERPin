@@ -54,7 +54,7 @@ namespace ERPin.Modules.Stock
             }
             else
             {
-                SaveRecord();
+                CreateRecord();
             }
             
         }
@@ -106,7 +106,7 @@ namespace ERPin.Modules.Stock
             }
         }
 
-        void SaveRecord()
+        void CreateRecord()
         {
             try
             {
