@@ -35,16 +35,17 @@
             this.barBtnInventoryList = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnInventoryGroup = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnInventoryTransaction = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barBtnCurrAcc = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnCurrAccGroup = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnCurrAccList = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnCurrAccTransaction = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -61,13 +62,15 @@
             this.barBtnCurrAcc,
             this.barBtnCurrAccGroup,
             this.barBtnCurrAccList,
-            this.barBtnCurrAccTransaction});
+            this.barBtnCurrAccTransaction,
+            this.skinRibbonGalleryBarItem1});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 9;
+            this.ribbon.MaxItemId = 10;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2});
+            this.ribbon.QuickToolbarItemLinks.Add(this.skinRibbonGalleryBarItem1);
             this.ribbon.Size = new System.Drawing.Size(816, 162);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
@@ -107,52 +110,6 @@
             this.barBtnInventoryTransaction.Name = "barBtnInventoryTransaction";
             this.barBtnInventoryTransaction.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnInventoryTransaction_ItemClick);
             // 
-            // ribbonPage1
-            // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-            this.ribbonPage1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage1.Image")));
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Inventory";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barBtnInventoryItem);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barBtnInventoryList);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barBtnInventoryGroup);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barBtnInventoryTransaction);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "Intentory Operations";
-            // 
-            // ribbonStatusBar
-            // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 604);
-            this.ribbonStatusBar.Name = "ribbonStatusBar";
-            this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(816, 31);
-            // 
-            // xtraTabbedMdiManager1
-            // 
-            this.xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
-            this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
-            // ribbonPage2
-            // 
-            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup2});
-            this.ribbonPage2.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage2.Image")));
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "Current";
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.barBtnCurrAcc);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barBtnCurrAccGroup);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barBtnCurrAccList);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barBtnCurrAccTransaction);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "Current Operations";
-            // 
             // barBtnCurrAcc
             // 
             this.barBtnCurrAcc.Caption = "Currrent Account";
@@ -188,6 +145,58 @@
             this.barBtnCurrAccTransaction.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnCurrAccTransaction.ImageOptions.LargeImage")));
             this.barBtnCurrAccTransaction.Name = "barBtnCurrAccTransaction";
             this.barBtnCurrAccTransaction.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnCurrAccTransaction_ItemClick);
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1});
+            this.ribbonPage1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage1.Image")));
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "Inventory";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.barBtnInventoryItem);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barBtnInventoryList);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barBtnInventoryGroup);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barBtnInventoryTransaction);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "Intentory Operations";
+            // 
+            // ribbonPage2
+            // 
+            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup2});
+            this.ribbonPage2.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage2.Image")));
+            this.ribbonPage2.Name = "ribbonPage2";
+            this.ribbonPage2.Text = "Current";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.barBtnCurrAcc);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barBtnCurrAccGroup);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barBtnCurrAccList);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barBtnCurrAccTransaction);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "Current Operations";
+            // 
+            // ribbonStatusBar
+            // 
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 604);
+            this.ribbonStatusBar.Name = "ribbonStatusBar";
+            this.ribbonStatusBar.Ribbon = this.ribbon;
+            this.ribbonStatusBar.Size = new System.Drawing.Size(816, 31);
+            // 
+            // xtraTabbedMdiManager1
+            // 
+            this.xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
+            this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
+            // skinRibbonGalleryBarItem1
+            // 
+            this.skinRibbonGalleryBarItem1.Caption = "skinRibbonGalleryBarItem1";
+            this.skinRibbonGalleryBarItem1.Id = 9;
+            this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
             // 
             // MainForm
             // 
@@ -228,5 +237,6 @@
         private DevExpress.XtraBars.BarButtonItem barBtnCurrAccGroup;
         private DevExpress.XtraBars.BarButtonItem barBtnCurrAccList;
         private DevExpress.XtraBars.BarButtonItem barBtnCurrAccTransaction;
+        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
     }
 }
