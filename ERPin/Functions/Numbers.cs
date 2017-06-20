@@ -8,14 +8,14 @@ namespace ERPin.Functions
 {
     class Numbers
     {
-        ERPinEntities db = new ERPinEntities();
+        private readonly ERPinEntities _db = new ERPinEntities();
 
         public string LastInventoryItemCode()
         {
             string num = "";
             try
             {
-                var firstOrDefault = db.Inventory.OrderByDescending(x => x.ItemCode).Select(s => s.ItemCode).FirstOrDefault();
+                var firstOrDefault = _db.Inventory.OrderByDescending(x => x.ItemCode).Select(s => s.ItemCode).FirstOrDefault();
                 if (firstOrDefault != null)
                 {
                     int number = int.Parse(firstOrDefault);
@@ -30,6 +30,28 @@ namespace ERPin.Functions
             }
             return num;
 
+        }
+
+        public string LastCurrAccCode()
+        {
+            string num = "";
+            try
+            {
+                var firstOrDefault = _db.CurrAcc.OrderByDescending(x => x.CurrAccCode).Select(s => s.CurrAccCode).FirstOrDefault();
+                if (firstOrDefault!=null)
+                {
+                    int number = int.Parse(firstOrDefault);
+                    number++;
+                    num = number.ToString().PadLeft(5 - lenHelper(number), '0');
+                    return num;
+                }
+                return num;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            return num;
         }
 
         int lenHelper(int x)
