@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCurrAccList));
-            this.Barcode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ItemCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CurrAccCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnClear = new DevExpress.XtraEditors.SimpleButton();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
@@ -38,7 +37,7 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtCurrAccName = new DevExpress.XtraEditors.TextEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.ItemName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CurrAccName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcList = new DevExpress.XtraGrid.GridControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtCurrAccCode = new DevExpress.XtraEditors.TextEdit();
@@ -58,25 +57,15 @@
             this.splitContainerControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Barcode
+            // CurrAccCode
             // 
-            this.Barcode.Caption = "Barcode";
-            this.Barcode.FieldName = "Barcode";
-            this.Barcode.Name = "Barcode";
-            this.Barcode.OptionsColumn.AllowEdit = false;
-            this.Barcode.OptionsColumn.AllowFocus = false;
-            this.Barcode.Visible = true;
-            this.Barcode.VisibleIndex = 2;
-            // 
-            // ItemCode
-            // 
-            this.ItemCode.Caption = "ItemCode";
-            this.ItemCode.FieldName = "ItemCode";
-            this.ItemCode.Name = "ItemCode";
-            this.ItemCode.OptionsColumn.AllowEdit = false;
-            this.ItemCode.OptionsColumn.AllowFocus = false;
-            this.ItemCode.Visible = true;
-            this.ItemCode.VisibleIndex = 0;
+            this.CurrAccCode.Caption = "CurrAccCode";
+            this.CurrAccCode.FieldName = "CurrAccCode";
+            this.CurrAccCode.Name = "CurrAccCode";
+            this.CurrAccCode.OptionsColumn.AllowEdit = false;
+            this.CurrAccCode.OptionsColumn.AllowFocus = false;
+            this.CurrAccCode.Visible = true;
+            this.CurrAccCode.VisibleIndex = 0;
             // 
             // Id
             // 
@@ -92,6 +81,7 @@
             this.btnClear.Size = new System.Drawing.Size(78, 53);
             this.btnClear.TabIndex = 6;
             this.btnClear.Text = "Clear";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSearch
             // 
@@ -101,6 +91,7 @@
             this.btnSearch.Size = new System.Drawing.Size(78, 53);
             this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "Search";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtCurrAccGroup
             // 
@@ -128,22 +119,21 @@
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.Id,
-            this.ItemCode,
-            this.ItemName,
-            this.Barcode});
+            this.CurrAccCode,
+            this.CurrAccName});
             this.gridView1.GridControl = this.gcList;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // ItemName
+            // CurrAccName
             // 
-            this.ItemName.Caption = "ItemName";
-            this.ItemName.FieldName = "ItemName";
-            this.ItemName.Name = "ItemName";
-            this.ItemName.OptionsColumn.AllowEdit = false;
-            this.ItemName.OptionsColumn.AllowFocus = false;
-            this.ItemName.Visible = true;
-            this.ItemName.VisibleIndex = 1;
+            this.CurrAccName.Caption = "CurrAccName";
+            this.CurrAccName.FieldName = "CurrAccName";
+            this.CurrAccName.Name = "CurrAccName";
+            this.CurrAccName.OptionsColumn.AllowEdit = false;
+            this.CurrAccName.OptionsColumn.AllowFocus = false;
+            this.CurrAccName.Visible = true;
+            this.CurrAccName.VisibleIndex = 1;
             // 
             // gcList
             // 
@@ -151,10 +141,11 @@
             this.gcList.Location = new System.Drawing.Point(0, 0);
             this.gcList.MainView = this.gridView1;
             this.gcList.Name = "gcList";
-            this.gcList.Size = new System.Drawing.Size(655, 595);
+            this.gcList.Size = new System.Drawing.Size(319, 349);
             this.gcList.TabIndex = 0;
             this.gcList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gcList.DoubleClick += new System.EventHandler(this.gcList_DoubleClick);
             // 
             // labelControl2
             // 
@@ -182,7 +173,7 @@
             this.xtraTabPage1.Controls.Add(this.txtCurrAccCode);
             this.xtraTabPage1.Controls.Add(this.labelControl1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(188, 567);
+            this.xtraTabPage1.Size = new System.Drawing.Size(188, 321);
             this.xtraTabPage1.Text = "Search";
             // 
             // labelControl1
@@ -199,7 +190,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(194, 595);
+            this.xtraTabControl1.Size = new System.Drawing.Size(194, 349);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1});
@@ -213,7 +204,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.gcList);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(854, 595);
+            this.splitContainerControl1.Size = new System.Drawing.Size(518, 349);
             this.splitContainerControl1.SplitterPosition = 194;
             this.splitContainerControl1.TabIndex = 1;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -222,7 +213,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 595);
+            this.ClientSize = new System.Drawing.Size(518, 349);
             this.Controls.Add(this.splitContainerControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -247,9 +238,7 @@
         }
 
         #endregion
-
-        private DevExpress.XtraGrid.Columns.GridColumn Barcode;
-        private DevExpress.XtraGrid.Columns.GridColumn ItemCode;
+        private DevExpress.XtraGrid.Columns.GridColumn CurrAccCode;
         private DevExpress.XtraGrid.Columns.GridColumn Id;
         private DevExpress.XtraEditors.SimpleButton btnClear;
         private DevExpress.XtraEditors.SimpleButton btnSearch;
@@ -257,7 +246,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit txtCurrAccName;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn ItemName;
+        private DevExpress.XtraGrid.Columns.GridColumn CurrAccName;
         private DevExpress.XtraGrid.GridControl gcList;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit txtCurrAccCode;
