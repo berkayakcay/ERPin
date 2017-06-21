@@ -24,9 +24,9 @@
           <Property Name="Fax1" Type="nvarchar" MaxLength="20" />
           <Property Name="Fax2" Type="nvarchar" MaxLength="20" />
           <Property Name="Web" Type="nvarchar" MaxLength="250" />
-          <Property Name="Mail" Type="nvarchar" MaxLength="250" />
+          <Property Name="EMail" Type="nvarchar" MaxLength="250" />
           <Property Name="Contact" Type="nvarchar" MaxLength="50" />
-          <Property Name="ContactMail" Type="nvarchar" MaxLength="250" />
+          <Property Name="ContactEmail" Type="nvarchar" MaxLength="250" />
           <Property Name="UpdatedDate" Type="datetime" />
           <Property Name="CreatedUserId" Type="int" />
           <Property Name="CreatedDate" Type="datetime" />
@@ -167,13 +167,13 @@
           <Property Name="Fax1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Fax2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Web" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Mail" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ContactMail" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
           <Property Name="CreatedUserId" Type="Int32" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
           <Property Name="UpdatedUserId" Type="Int32" />
+          <Property Name="EMail" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ContactEmail" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -241,13 +241,13 @@
           <EntitySetMapping Name="CurrAcc">
             <EntityTypeMapping TypeName="ERPinModel.CurrAcc">
               <MappingFragment StoreEntitySet="CurrAcc">
+                <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+                <ScalarProperty Name="EMail" ColumnName="EMail" />
                 <ScalarProperty Name="UpdatedUserId" ColumnName="UpdatedUserId" />
                 <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
                 <ScalarProperty Name="CreatedUserId" ColumnName="CreatedUserId" />
                 <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
-                <ScalarProperty Name="ContactMail" ColumnName="ContactMail" />
                 <ScalarProperty Name="Contact" ColumnName="Contact" />
-                <ScalarProperty Name="Mail" ColumnName="Mail" />
                 <ScalarProperty Name="Web" ColumnName="Web" />
                 <ScalarProperty Name="Fax2" ColumnName="Fax2" />
                 <ScalarProperty Name="Fax1" ColumnName="Fax1" />
