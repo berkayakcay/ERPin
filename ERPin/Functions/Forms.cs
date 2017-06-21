@@ -11,6 +11,20 @@ namespace ERPin.Functions
     class Forms
     {
         #region Inventory
+        public void InventoryItem(bool Open = false)
+        {
+            frmInventoryItem inventoryItem = new frmInventoryItem();
+            inventoryItem.ShowDialog();
+        }
+
+        public int InventoryGroup(bool Selection = false)
+        {
+            frmInventoryGroup inventoryGroup = new frmInventoryGroup();
+            if (Selection) inventoryGroup.Selection = Selection;
+            inventoryGroup.ShowDialog();
+            return MainForm.Transfer;
+        }
+
         public int InventoryList(bool Selection = false)
         {
             frmInventoryList inventoryList = new frmInventoryList();
@@ -27,27 +41,24 @@ namespace ERPin.Functions
             return MainForm.Transfer;
         }
 
-        public int InventoryGroup(bool Selection = false)
-        {
-            frmInventoryGroup inventoryGroup = new frmInventoryGroup();
-            if (Selection) inventoryGroup.Selection = Selection;
-            inventoryGroup.ShowDialog();
-            return MainForm.Transfer;
-        }
-
         public void InventoryTransaction(bool Open = false)
         {
 
         }
 
-        public void InventoryItem(bool Open = false)
-        {
-            frmInventoryItem inventoryItem = new frmInventoryItem();
-            inventoryItem.ShowDialog();
-        }
         #endregion
 
         #region Current Account
+
+        public void CurrAcc(bool Open = false, int CurrAccId = -1)
+        {
+            frmCurrAcc currAcc = new frmCurrAcc();
+            if (Open)
+            {
+                currAcc.Open(CurrAccId);
+            }
+            currAcc.ShowDialog();
+        }
 
         public int CurrAccGroup(bool Selection = false)
         {
@@ -57,6 +68,22 @@ namespace ERPin.Functions
                 currAccGroup.Selection = Selection;
             }
             currAccGroup.ShowDialog();
+            return MainForm.Transfer;
+        }
+
+        public int CurrAccList(bool Selection = false)
+        {
+            Modules.Current.frmCurrAccList currAccList = new frmCurrAccList();
+            if (Selection)
+            {
+                currAccList.Selection = Selection;
+                currAccList.ShowDialog();
+            }
+            else
+            {
+                currAccList.MdiParent = MainForm.ActiveForm;
+                currAccList.Show();
+            }
             return MainForm.Transfer;
         }
         #endregion

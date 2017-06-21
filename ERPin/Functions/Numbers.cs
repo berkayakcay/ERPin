@@ -32,9 +32,13 @@ namespace ERPin.Functions
 
         }
 
+        /// <summary>
+        /// Get lastest current account code from database
+        /// </summary>
+        /// <returns></returns>
         public string LastCurrAccCode()
         {
-            string num = "";
+            string num = "00001";
             try
             {
                 var firstOrDefault = _db.CurrAcc.OrderByDescending(x => x.CurrAccCode).Select(s => s.CurrAccCode).FirstOrDefault();

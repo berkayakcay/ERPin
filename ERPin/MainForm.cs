@@ -29,14 +29,10 @@ namespace ERPin
 
         }
 
+        #region Inventory
         private void barBtnInventoryItem_ItemClick(object sender, ItemClickEventArgs e)
         {
             forms.InventoryItem();
-        }
-
-        private void barBtnInventoryList_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            forms.InventoryList();
         }
 
         private void barBtnInventoryGroup_ItemClick(object sender, ItemClickEventArgs e)
@@ -44,14 +40,21 @@ namespace ERPin
             forms.InventoryGroup();
         }
 
+        private void barBtnInventoryList_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            forms.InventoryList();
+        }
+
         private void barBtnInventoryTransaction_ItemClick(object sender, ItemClickEventArgs e)
         {
             forms.InventoryTransaction();
         }
+        #endregion
 
+        #region Current Account
         private void barBtnCurrAcc_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            forms.CurrAcc();
         }
 
         private void barBtnCurrAccGroup_ItemClick(object sender, ItemClickEventArgs e)
@@ -61,12 +64,13 @@ namespace ERPin
 
         private void barBtnCurrAccList_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            forms.CurrAccList();
         }
 
         private void barBtnCurrAccTransaction_ItemClick(object sender, ItemClickEventArgs e)
         {
 
-        }
+        } 
+        #endregion
     }
 }
