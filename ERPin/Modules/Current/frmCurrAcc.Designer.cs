@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCurrAcc));
             this.groupControlCurrAccSum = new DevExpress.XtraEditors.GroupControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtGroupName = new DevExpress.XtraEditors.TextEdit();
@@ -40,9 +39,9 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtCurrAccName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtGroupCode = new DevExpress.XtraEditors.ButtonEdit();
+            this.txtCurrAccCode = new DevExpress.XtraEditors.ButtonEdit();
             this.groupControlCurrAccInfo = new DevExpress.XtraEditors.GroupControl();
-            this.btnAddPicture = new DevExpress.XtraEditors.SimpleButton();
-            this.pbCurrAccPicture = new System.Windows.Forms.PictureBox();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.txtContactMail = new DevExpress.XtraEditors.TextEdit();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
@@ -71,17 +70,16 @@
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.txtAddress = new DevExpress.XtraEditors.MemoEdit();
-            this.txtGroupCode = new DevExpress.XtraEditors.ButtonEdit();
-            this.txtCurrAccCode = new DevExpress.XtraEditors.ButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlCurrAccSum)).BeginInit();
             this.groupControlCurrAccSum.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaxNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaxOffice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCurrAccName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGroupCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCurrAccCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlCurrAccInfo)).BeginInit();
             this.groupControlCurrAccInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCurrAccPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContactMail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContact.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
@@ -96,8 +94,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGroupCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCurrAccCode.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControlCurrAccSum
@@ -118,13 +114,13 @@
             this.groupControlCurrAccSum.Location = new System.Drawing.Point(0, 0);
             this.groupControlCurrAccSum.Name = "groupControlCurrAccSum";
             this.groupControlCurrAccSum.Padding = new System.Windows.Forms.Padding(3);
-            this.groupControlCurrAccSum.Size = new System.Drawing.Size(576, 122);
+            this.groupControlCurrAccSum.Size = new System.Drawing.Size(528, 122);
             this.groupControlCurrAccSum.TabIndex = 0;
             this.groupControlCurrAccSum.Text = "Current Account Summary";
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(304, 88);
+            this.labelControl6.Location = new System.Drawing.Point(271, 87);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(66, 13);
             this.labelControl6.TabIndex = 11;
@@ -132,14 +128,14 @@
             // 
             // txtGroupName
             // 
-            this.txtGroupName.Location = new System.Drawing.Point(373, 84);
+            this.txtGroupName.Location = new System.Drawing.Point(346, 84);
             this.txtGroupName.Name = "txtGroupName";
-            this.txtGroupName.Size = new System.Drawing.Size(186, 20);
+            this.txtGroupName.Size = new System.Drawing.Size(172, 20);
             this.txtGroupName.TabIndex = 10;
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(304, 62);
+            this.labelControl5.Location = new System.Drawing.Point(271, 61);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(65, 13);
             this.labelControl5.TabIndex = 9;
@@ -147,14 +143,14 @@
             // 
             // txtTaxNumber
             // 
-            this.txtTaxNumber.Location = new System.Drawing.Point(373, 58);
+            this.txtTaxNumber.Location = new System.Drawing.Point(346, 58);
             this.txtTaxNumber.Name = "txtTaxNumber";
-            this.txtTaxNumber.Size = new System.Drawing.Size(186, 20);
-            this.txtTaxNumber.TabIndex = 8;
+            this.txtTaxNumber.Size = new System.Drawing.Size(172, 20);
+            this.txtTaxNumber.TabIndex = 4;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(304, 36);
+            this.labelControl4.Location = new System.Drawing.Point(271, 35);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(57, 13);
             this.labelControl4.TabIndex = 7;
@@ -162,10 +158,10 @@
             // 
             // txtTaxOffice
             // 
-            this.txtTaxOffice.Location = new System.Drawing.Point(373, 32);
+            this.txtTaxOffice.Location = new System.Drawing.Point(346, 32);
             this.txtTaxOffice.Name = "txtTaxOffice";
-            this.txtTaxOffice.Size = new System.Drawing.Size(186, 20);
-            this.txtTaxOffice.TabIndex = 6;
+            this.txtTaxOffice.Size = new System.Drawing.Size(172, 20);
+            this.txtTaxOffice.TabIndex = 3;
             // 
             // labelControl3
             // 
@@ -185,10 +181,10 @@
             // 
             // txtCurrAccName
             // 
-            this.txtCurrAccName.Location = new System.Drawing.Point(84, 58);
+            this.txtCurrAccName.Location = new System.Drawing.Point(81, 58);
             this.txtCurrAccName.Name = "txtCurrAccName";
-            this.txtCurrAccName.Size = new System.Drawing.Size(186, 20);
-            this.txtCurrAccName.TabIndex = 2;
+            this.txtCurrAccName.Size = new System.Drawing.Size(172, 20);
+            this.txtCurrAccName.TabIndex = 1;
             // 
             // labelControl1
             // 
@@ -198,10 +194,28 @@
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Code :";
             // 
+            // txtGroupCode
+            // 
+            this.txtGroupCode.Location = new System.Drawing.Point(81, 84);
+            this.txtGroupCode.Name = "txtGroupCode";
+            this.txtGroupCode.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtGroupCode.Size = new System.Drawing.Size(172, 20);
+            this.txtGroupCode.TabIndex = 2;
+            this.txtGroupCode.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtGroupCode_ButtonClick);
+            // 
+            // txtCurrAccCode
+            // 
+            this.txtCurrAccCode.Location = new System.Drawing.Point(81, 32);
+            this.txtCurrAccCode.Name = "txtCurrAccCode";
+            this.txtCurrAccCode.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtCurrAccCode.Size = new System.Drawing.Size(172, 20);
+            this.txtCurrAccCode.TabIndex = 0;
+            this.txtCurrAccCode.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtCurrAccCode_ButtonClick);
+            // 
             // groupControlCurrAccInfo
             // 
-            this.groupControlCurrAccInfo.Controls.Add(this.btnAddPicture);
-            this.groupControlCurrAccInfo.Controls.Add(this.pbCurrAccPicture);
             this.groupControlCurrAccInfo.Controls.Add(this.labelControl15);
             this.groupControlCurrAccInfo.Controls.Add(this.txtContactMail);
             this.groupControlCurrAccInfo.Controls.Add(this.labelControl16);
@@ -230,47 +244,28 @@
             this.groupControlCurrAccInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControlCurrAccInfo.Location = new System.Drawing.Point(0, 122);
             this.groupControlCurrAccInfo.Name = "groupControlCurrAccInfo";
-            this.groupControlCurrAccInfo.Size = new System.Drawing.Size(576, 429);
+            this.groupControlCurrAccInfo.Size = new System.Drawing.Size(528, 323);
             this.groupControlCurrAccInfo.TabIndex = 1;
             this.groupControlCurrAccInfo.Text = "Current Account Info";
-            this.groupControlCurrAccInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl2_Paint);
-            // 
-            // btnAddPicture
-            // 
-            this.btnAddPicture.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.btnAddPicture.Location = new System.Drawing.Point(134, 297);
-            this.btnAddPicture.Name = "btnAddPicture";
-            this.btnAddPicture.Size = new System.Drawing.Size(136, 38);
-            this.btnAddPicture.TabIndex = 35;
-            this.btnAddPicture.Text = "Add Picture";
-            // 
-            // pbCurrAccPicture
-            // 
-            this.pbCurrAccPicture.Location = new System.Drawing.Point(134, 175);
-            this.pbCurrAccPicture.Name = "pbCurrAccPicture";
-            this.pbCurrAccPicture.Size = new System.Drawing.Size(136, 116);
-            this.pbCurrAccPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbCurrAccPicture.TabIndex = 34;
-            this.pbCurrAccPicture.TabStop = false;
             // 
             // labelControl15
             // 
-            this.labelControl15.Location = new System.Drawing.Point(304, 114);
+            this.labelControl15.Location = new System.Drawing.Point(271, 192);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(66, 13);
+            this.labelControl15.Size = new System.Drawing.Size(75, 13);
             this.labelControl15.TabIndex = 33;
-            this.labelControl15.Text = "Contact Mail :";
+            this.labelControl15.Text = "Contact  Email :";
             // 
             // txtContactMail
             // 
-            this.txtContactMail.Location = new System.Drawing.Point(373, 110);
+            this.txtContactMail.Location = new System.Drawing.Point(346, 188);
             this.txtContactMail.Name = "txtContactMail";
-            this.txtContactMail.Size = new System.Drawing.Size(186, 20);
-            this.txtContactMail.TabIndex = 32;
+            this.txtContactMail.Size = new System.Drawing.Size(172, 20);
+            this.txtContactMail.TabIndex = 11;
             // 
             // labelControl16
             // 
-            this.labelControl16.Location = new System.Drawing.Point(304, 88);
+            this.labelControl16.Location = new System.Drawing.Point(271, 166);
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Size = new System.Drawing.Size(45, 13);
             this.labelControl16.TabIndex = 31;
@@ -278,14 +273,14 @@
             // 
             // txtContact
             // 
-            this.txtContact.Location = new System.Drawing.Point(373, 84);
+            this.txtContact.Location = new System.Drawing.Point(346, 162);
             this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(186, 20);
-            this.txtContact.TabIndex = 30;
+            this.txtContact.Size = new System.Drawing.Size(172, 20);
+            this.txtContact.TabIndex = 10;
             // 
             // labelControl17
             // 
-            this.labelControl17.Location = new System.Drawing.Point(304, 62);
+            this.labelControl17.Location = new System.Drawing.Point(271, 140);
             this.labelControl17.Name = "labelControl17";
             this.labelControl17.Size = new System.Drawing.Size(31, 13);
             this.labelControl17.TabIndex = 29;
@@ -293,14 +288,14 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(373, 58);
+            this.txtEmail.Location = new System.Drawing.Point(346, 136);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(186, 20);
-            this.txtEmail.TabIndex = 28;
+            this.txtEmail.Size = new System.Drawing.Size(172, 20);
+            this.txtEmail.TabIndex = 9;
             // 
             // labelControl18
             // 
-            this.labelControl18.Location = new System.Drawing.Point(304, 36);
+            this.labelControl18.Location = new System.Drawing.Point(271, 114);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(29, 13);
             this.labelControl18.TabIndex = 27;
@@ -308,14 +303,14 @@
             // 
             // txtWeb
             // 
-            this.txtWeb.Location = new System.Drawing.Point(373, 32);
+            this.txtWeb.Location = new System.Drawing.Point(346, 110);
             this.txtWeb.Name = "txtWeb";
-            this.txtWeb.Size = new System.Drawing.Size(186, 20);
-            this.txtWeb.TabIndex = 26;
+            this.txtWeb.Size = new System.Drawing.Size(172, 20);
+            this.txtWeb.TabIndex = 8;
             // 
             // labelControl14
             // 
-            this.labelControl14.Location = new System.Drawing.Point(304, 219);
+            this.labelControl14.Location = new System.Drawing.Point(12, 191);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(34, 13);
             this.labelControl14.TabIndex = 25;
@@ -323,14 +318,14 @@
             // 
             // txtFax2
             // 
-            this.txtFax2.Location = new System.Drawing.Point(373, 215);
+            this.txtFax2.Location = new System.Drawing.Point(80, 188);
             this.txtFax2.Name = "txtFax2";
-            this.txtFax2.Size = new System.Drawing.Size(186, 20);
-            this.txtFax2.TabIndex = 24;
+            this.txtFax2.Size = new System.Drawing.Size(172, 20);
+            this.txtFax2.TabIndex = 7;
             // 
             // labelControl13
             // 
-            this.labelControl13.Location = new System.Drawing.Point(304, 192);
+            this.labelControl13.Location = new System.Drawing.Point(12, 165);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(34, 13);
             this.labelControl13.TabIndex = 23;
@@ -338,14 +333,14 @@
             // 
             // txtFax1
             // 
-            this.txtFax1.Location = new System.Drawing.Point(373, 188);
+            this.txtFax1.Location = new System.Drawing.Point(80, 162);
             this.txtFax1.Name = "txtFax1";
-            this.txtFax1.Size = new System.Drawing.Size(186, 20);
-            this.txtFax1.TabIndex = 22;
+            this.txtFax1.Size = new System.Drawing.Size(172, 20);
+            this.txtFax1.TabIndex = 6;
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(304, 166);
+            this.labelControl12.Location = new System.Drawing.Point(12, 139);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(46, 13);
             this.labelControl12.TabIndex = 21;
@@ -353,14 +348,14 @@
             // 
             // txtPhone2
             // 
-            this.txtPhone2.Location = new System.Drawing.Point(373, 162);
+            this.txtPhone2.Location = new System.Drawing.Point(81, 136);
             this.txtPhone2.Name = "txtPhone2";
-            this.txtPhone2.Size = new System.Drawing.Size(186, 20);
-            this.txtPhone2.TabIndex = 20;
+            this.txtPhone2.Size = new System.Drawing.Size(172, 20);
+            this.txtPhone2.TabIndex = 5;
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(304, 140);
+            this.labelControl11.Location = new System.Drawing.Point(12, 113);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(46, 13);
             this.labelControl11.TabIndex = 19;
@@ -368,14 +363,14 @@
             // 
             // txtPhone1
             // 
-            this.txtPhone1.Location = new System.Drawing.Point(373, 136);
+            this.txtPhone1.Location = new System.Drawing.Point(81, 110);
             this.txtPhone1.Name = "txtPhone1";
-            this.txtPhone1.Size = new System.Drawing.Size(186, 20);
-            this.txtPhone1.TabIndex = 18;
+            this.txtPhone1.Size = new System.Drawing.Size(172, 20);
+            this.txtPhone1.TabIndex = 4;
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(12, 114);
+            this.labelControl10.Location = new System.Drawing.Point(271, 36);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(46, 13);
             this.labelControl10.TabIndex = 17;
@@ -391,10 +386,10 @@
             // 
             // txtDistrict
             // 
-            this.txtDistrict.Location = new System.Drawing.Point(84, 84);
+            this.txtDistrict.Location = new System.Drawing.Point(80, 84);
             this.txtDistrict.Name = "txtDistrict";
-            this.txtDistrict.Size = new System.Drawing.Size(186, 20);
-            this.txtDistrict.TabIndex = 14;
+            this.txtDistrict.Size = new System.Drawing.Size(172, 20);
+            this.txtDistrict.TabIndex = 2;
             // 
             // labelControl8
             // 
@@ -406,10 +401,10 @@
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(84, 58);
+            this.txtCity.Location = new System.Drawing.Point(80, 58);
             this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(186, 20);
-            this.txtCity.TabIndex = 12;
+            this.txtCity.Size = new System.Drawing.Size(172, 20);
+            this.txtCity.TabIndex = 1;
             // 
             // labelControl7
             // 
@@ -421,10 +416,10 @@
             // 
             // txtCountry
             // 
-            this.txtCountry.Location = new System.Drawing.Point(84, 32);
+            this.txtCountry.Location = new System.Drawing.Point(80, 32);
             this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(186, 20);
-            this.txtCountry.TabIndex = 10;
+            this.txtCountry.Size = new System.Drawing.Size(172, 20);
+            this.txtCountry.TabIndex = 0;
             // 
             // groupControl3
             // 
@@ -432,9 +427,9 @@
             this.groupControl3.Controls.Add(this.btnDelete);
             this.groupControl3.Controls.Add(this.btnSave);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl3.Location = new System.Drawing.Point(2, 341);
+            this.groupControl3.Location = new System.Drawing.Point(2, 231);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(572, 86);
+            this.groupControl3.Size = new System.Drawing.Size(524, 90);
             this.groupControl3.TabIndex = 5;
             // 
             // btnClose
@@ -442,62 +437,47 @@
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.ImageOptions.Image = global::ERPin.Properties.Resources.Close24x24;
             this.btnClose.ImageOptions.ImageUri.Uri = "Close";
-            this.btnClose.Location = new System.Drawing.Point(485, 24);
+            this.btnClose.Location = new System.Drawing.Point(437, 28);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 50);
             this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Close";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.ImageOptions.ImageUri.Uri = "Delete";
-            this.btnDelete.Location = new System.Drawing.Point(404, 24);
+            this.btnDelete.Location = new System.Drawing.Point(356, 28);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 50);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.ImageOptions.ImageUri.Uri = "Save";
-            this.btnSave.Location = new System.Drawing.Point(323, 24);
+            this.btnSave.Location = new System.Drawing.Point(275, 28);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 50);
-            this.btnSave.TabIndex = 4;
+            this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(84, 113);
+            this.txtAddress.Location = new System.Drawing.Point(346, 32);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(186, 56);
-            this.txtAddress.TabIndex = 16;
-            // 
-            // txtGroupCode
-            // 
-            this.txtGroupCode.Location = new System.Drawing.Point(84, 84);
-            this.txtGroupCode.Name = "txtGroupCode";
-            this.txtGroupCode.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtGroupCode.Size = new System.Drawing.Size(186, 20);
-            this.txtGroupCode.TabIndex = 4;
-            // 
-            // txtCurrAccCode
-            // 
-            this.txtCurrAccCode.Location = new System.Drawing.Point(84, 32);
-            this.txtCurrAccCode.Name = "txtCurrAccCode";
-            this.txtCurrAccCode.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtCurrAccCode.Size = new System.Drawing.Size(186, 20);
-            this.txtCurrAccCode.TabIndex = 0;
+            this.txtAddress.Size = new System.Drawing.Size(172, 72);
+            this.txtAddress.TabIndex = 3;
             // 
             // frmCurrAcc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(576, 551);
+            this.ClientSize = new System.Drawing.Size(528, 445);
             this.Controls.Add(this.groupControlCurrAccInfo);
             this.Controls.Add(this.groupControlCurrAccSum);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -514,10 +494,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTaxNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaxOffice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCurrAccName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGroupCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCurrAccCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlCurrAccInfo)).EndInit();
             this.groupControlCurrAccInfo.ResumeLayout(false);
             this.groupControlCurrAccInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCurrAccPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContactMail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContact.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
@@ -532,8 +513,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGroupCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCurrAccCode.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -580,8 +559,6 @@
         private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.MemoEdit txtAddress;
-        private DevExpress.XtraEditors.SimpleButton btnAddPicture;
-        private System.Windows.Forms.PictureBox pbCurrAccPicture;
         private DevExpress.XtraEditors.ButtonEdit txtGroupCode;
         private DevExpress.XtraEditors.ButtonEdit txtCurrAccCode;
     }
