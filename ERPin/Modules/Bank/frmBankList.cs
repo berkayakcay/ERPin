@@ -13,9 +13,23 @@ namespace ERPin.Modules.Bank
 {
     public partial class frmBankList : DevExpress.XtraEditors.XtraForm
     {
+        private bool Selection = false;
+        private int SelectionId = -1;
+
         public frmBankList()
         {
             InitializeComponent();
+        }
+
+        private void frmBankList_Load(object sender, EventArgs e)
+        {
+            ListRecord();
+        }
+
+
+        void ListRecord()
+        {
+            
         }
     }
 }

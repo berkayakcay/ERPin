@@ -49,8 +49,8 @@
             this.txtAccountType = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtBankName = new DevExpress.XtraEditors.TextEdit();
-            this.groupControlBankList = new DevExpress.XtraEditors.GroupControl();
             this.txtAdress = new DevExpress.XtraEditors.MemoEdit();
+            this.groupControlBankList = new DevExpress.XtraEditors.GroupControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Id = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -67,9 +67,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBankBranch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAccountType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBankName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAdress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlBankList)).BeginInit();
             this.groupControlBankList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAdress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
@@ -260,6 +260,13 @@
             this.txtBankName.Size = new System.Drawing.Size(199, 20);
             this.txtBankName.TabIndex = 0;
             // 
+            // txtAdress
+            // 
+            this.txtAdress.Location = new System.Drawing.Point(102, 179);
+            this.txtAdress.Name = "txtAdress";
+            this.txtAdress.Size = new System.Drawing.Size(199, 56);
+            this.txtAdress.TabIndex = 8;
+            // 
             // groupControlBankList
             // 
             this.groupControlBankList.Controls.Add(this.gridControl1);
@@ -269,13 +276,6 @@
             this.groupControlBankList.Size = new System.Drawing.Size(394, 213);
             this.groupControlBankList.TabIndex = 8;
             this.groupControlBankList.Text = "Bank List";
-            // 
-            // txtAdress
-            // 
-            this.txtAdress.Location = new System.Drawing.Point(102, 179);
-            this.txtAdress.Name = "txtAdress";
-            this.txtAdress.Size = new System.Drawing.Size(199, 56);
-            this.txtAdress.TabIndex = 8;
             // 
             // gridControl1
             // 
@@ -347,6 +347,7 @@
             this.ClientSize = new System.Drawing.Size(394, 519);
             this.Controls.Add(this.groupControlBankList);
             this.Controls.Add(this.groupControlBankInfo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmBankAcc";
@@ -364,9 +365,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBankBranch.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAccountType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBankName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAdress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlBankList)).EndInit();
             this.groupControlBankList.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtAdress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);

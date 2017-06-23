@@ -13,9 +13,24 @@ namespace ERPin.Modules.Bank
 {
     public partial class frmBankingTransaction : DevExpress.XtraEditors.XtraForm
     {
+        #region Fields
+        private int TransactionId = -1;
+        #endregion
+
+        #region Events
         public frmBankingTransaction()
         {
             InitializeComponent();
         }
+
+        private void frmBankingTransaction_Load(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region Methods
+
+        #endregion
     }
 }

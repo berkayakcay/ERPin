@@ -124,17 +124,17 @@
     <Compile Include="Modules\Bank\frmBankingTransaction.Designer.cs">
       <DependentUpon>frmBankingTransaction.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Bank\frmBankList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modules\Bank\frmBankList.Designer.cs">
-      <DependentUpon>frmBankList.cs</DependentUpon>
-    </Compile>
     <Compile Include="Modules\Bank\frmTransferMoney.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modules\Bank\frmTransferMoney.Designer.cs">
       <DependentUpon>frmTransferMoney.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Bank\frmBankList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Bank\frmBankList.Designer.cs">
+      <DependentUpon>frmBankList.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\Current\frmCurrAccGroup.cs">
       <SubType>Form</SubType>
@@ -191,6 +191,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Bank\frmBankAcc.resx">
       <DependentUpon>frmBankAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Bank\frmBanking.resx">
+      <DependentUpon>frmBanking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Bank\frmBankingTransaction.resx">
+      <DependentUpon>frmBankingTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Bank\frmBankList.resx">
+      <DependentUpon>frmBankList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Bank\frmTransferMoney.resx">
+      <DependentUpon>frmTransferMoney.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Current\frmCurrAcc.resx">
       <DependentUpon>frmCurrAcc.cs</DependentUpon>
