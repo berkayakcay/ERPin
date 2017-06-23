@@ -133,6 +133,56 @@ namespace ERPin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Case32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Case32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CashAccount32x32 {
+            get {
+                object obj = ResourceManager.GetObject("CashAccount32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CashDeposit32x32 {
+            get {
+                object obj = ResourceManager.GetObject("CashDeposit32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CashList32x32 {
+            get {
+                object obj = ResourceManager.GetObject("CashList32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CashTransfer32x32 {
+            get {
+                object obj = ResourceManager.GetObject("CashTransfer32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Close24x24 {
             get {
                 object obj = ResourceManager.GetObject("Close24x24", resourceCulture);
@@ -146,6 +196,56 @@ namespace ERPin.Properties {
         internal static System.Drawing.Bitmap GreenTag {
             get {
                 object obj = ResourceManager.GetObject("GreenTag", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Invoice32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Invoice32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InvoicePurchase32x32 {
+            get {
+                object obj = ResourceManager.GetObject("InvoicePurchase32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InvoicePurchaseReturn32x32 {
+            get {
+                object obj = ResourceManager.GetObject("InvoicePurchaseReturn32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InvoiceSale32x32 {
+            get {
+                object obj = ResourceManager.GetObject("InvoiceSale32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InvoiceSaleReturn32x32 {
+            get {
+                object obj = ResourceManager.GetObject("InvoiceSaleReturn32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

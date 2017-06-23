@@ -136,6 +136,30 @@
     <Compile Include="Modules\Bank\frmBankList.Designer.cs">
       <DependentUpon>frmBankList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Cash\frmCashAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Cash\frmCashAccount.Designer.cs">
+      <DependentUpon>frmCashAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Cash\frmCashDeposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Cash\frmCashDeposit.Designer.cs">
+      <DependentUpon>frmCashDeposit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Cash\frmCashList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Cash\frmCashList.Designer.cs">
+      <DependentUpon>frmCashList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Cash\frmCashTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Cash\frmCashTransfer.Designer.cs">
+      <DependentUpon>frmCashTransfer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Current\frmCurrAccGroup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +208,18 @@
     <Compile Include="Modules\Inventory\frmInventoryTransaction.Designer.cs">
       <DependentUpon>frmInventoryTransaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Invoice\frmInvoiceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Invoice\frmInvoiceList.Designer.cs">
+      <DependentUpon>frmInvoiceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Invoice\frmInvoiceSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Invoice\frmInvoiceSale.Designer.cs">
+      <DependentUpon>frmInvoiceSale.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
@@ -204,6 +240,18 @@
     <EmbeddedResource Include="Modules\Bank\frmTransferMoney.resx">
       <DependentUpon>frmTransferMoney.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Cash\frmCashAccount.resx">
+      <DependentUpon>frmCashAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Cash\frmCashDeposit.resx">
+      <DependentUpon>frmCashDeposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Cash\frmCashList.resx">
+      <DependentUpon>frmCashList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Cash\frmCashTransfer.resx">
+      <DependentUpon>frmCashTransfer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Current\frmCurrAcc.resx">
       <DependentUpon>frmCurrAcc.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,6 +269,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Inventory\frmInventoryList.resx">
       <DependentUpon>frmInventoryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Invoice\frmInvoiceList.resx">
+      <DependentUpon>frmInvoiceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Invoice\frmInvoiceSale.resx">
+      <DependentUpon>frmInvoiceSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -265,6 +319,16 @@
       <DependentUpon>Database.edmx</DependentUpon>
       <LastGenOutput>Database.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\InvoicePurchaseReturn32x32.png" />
+    <None Include="Resources\InvoicePurchase32x32.png" />
+    <None Include="Resources\InvoiceSaleReturn32x32.png" />
+    <None Include="Resources\InvoiceSale32x32.png" />
+    <None Include="Resources\Invoice32x32.png" />
+    <None Include="Resources\CashDeposit32x32.png" />
+    <None Include="Resources\CashTransfer32x32.png" />
+    <None Include="Resources\CashList32x32.png" />
+    <None Include="Resources\CashAccount32x32.png" />
+    <None Include="Resources\Case32x32.png" />
     <None Include="Resources\BankingTransaction32x32.png" />
     <None Include="Resources\Banking32x32.png" />
     <None Include="Resources\BankList32x32.png" />
@@ -299,5 +363,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -121,6 +121,9 @@
   <data name="BankAccount32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BankAccount32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CashDeposit32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CashDeposit32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Banking32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Banking32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,6 +136,9 @@
   <data name="BankList32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BankList32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="InvoiceSale32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InvoiceSale32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="GreenTag" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GreenTag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,8 +148,23 @@
   <data name="Bank32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bank32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CashAccount32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CashAccount32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CashList32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CashList32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CashTransfer32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CashTransfer32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="box" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\box.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InvoicePurchase32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InvoicePurchase32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BankingTransaction32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BankingTransaction32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Stok_Kartı16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Stok_Kartı16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,13 +172,22 @@
   <data name="Stok_Kartı32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Stok_Kartı32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Case32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Case32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InvoiceSaleReturn32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InvoiceSaleReturn32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Close24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Close24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Stok_Liste32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Stok_Liste32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BankingTransaction32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BankingTransaction32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Invoice32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Invoice32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InvoicePurchaseReturn32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InvoicePurchaseReturn32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
