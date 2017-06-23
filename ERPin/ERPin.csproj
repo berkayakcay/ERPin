@@ -106,6 +106,36 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Bank\frmBankAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Bank\frmBankAcc.Designer.cs">
+      <DependentUpon>frmBankAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Bank\frmBanking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Bank\frmBanking.Designer.cs">
+      <DependentUpon>frmBanking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Bank\frmBankingTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Bank\frmBankingTransaction.Designer.cs">
+      <DependentUpon>frmBankingTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Bank\frmBankList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Bank\frmBankList.Designer.cs">
+      <DependentUpon>frmBankList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Bank\frmTransferMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Bank\frmTransferMoney.Designer.cs">
+      <DependentUpon>frmTransferMoney.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Current\frmCurrAccGroup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +188,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Bank\frmBankAcc.resx">
+      <DependentUpon>frmBankAcc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Current\frmCurrAcc.resx">
       <DependentUpon>frmCurrAcc.cs</DependentUpon>
@@ -220,6 +253,12 @@
       <DependentUpon>Database.edmx</DependentUpon>
       <LastGenOutput>Database.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\BankingTransaction32x32.png" />
+    <None Include="Resources\Banking32x32.png" />
+    <None Include="Resources\BankList32x32.png" />
+    <None Include="Resources\BankTransferMoney32x32.png" />
+    <None Include="Resources\BankAccount32x32.png" />
+    <None Include="Resources\Bank32x32.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\GreenTag.png" />
