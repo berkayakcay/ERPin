@@ -1,6 +1,6 @@
 ﻿namespace ERPin.Modules.Cash
 {
-    partial class frmCashList
+    partial class FrmCashList
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCashList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCashList));
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtItemName = new DevExpress.XtraEditors.TextEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -229,7 +229,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmCashList";
+            this.Name = "FrmCashList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cash List";
             this.Load += new System.EventHandler(this.frmCashList_Load);

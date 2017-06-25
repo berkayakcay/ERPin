@@ -11,11 +11,11 @@ using DevExpress.XtraEditors;
 
 namespace ERPin.Modules.Cash
 {
-    public partial class frmCashList : DevExpress.XtraEditors.XtraForm
+    public partial class FrmCashList : DevExpress.XtraEditors.XtraForm
     {
         public bool Selection = false;
 
-        public frmCashList()
+        public FrmCashList()
         {
             InitializeComponent();
         }

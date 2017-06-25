@@ -1,6 +1,6 @@
 ﻿namespace ERPin.Modules.Cash
 {
-    partial class frmCashDeposit
+    partial class FrmCashDeposit
     {
         /// <summary>
         /// Required designer variable.
@@ -302,7 +302,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmCashDeposit";
+            this.Name = "FrmCashDeposit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cash Deposit";
             this.Load += new System.EventHandler(this.frmCashDeposit_Load);

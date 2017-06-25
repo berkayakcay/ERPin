@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace ERPin.Modules.Cash
 {
-    public partial class frmCashTransfer : DevExpress.XtraEditors.XtraForm
+    public partial class FrmCashTransfer : DevExpress.XtraEditors.XtraForm
     {
-        public frmCashTransfer()
+        public FrmCashTransfer()
         {
             InitializeComponent();
         }

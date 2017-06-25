@@ -11,13 +11,13 @@ using DevExpress.XtraEditors;
 
 namespace ERPin.Modules.Cash
 {
-    public partial class frmCashDeposit : DevExpress.XtraEditors.XtraForm
+    public partial class FrmCashDeposit : DevExpress.XtraEditors.XtraForm
     {
-        private bool Edit = false;
-        private int TransactionId = -1;
-        private string TransactionType = "";
+        private bool _edit = false;
+        private int _transactionId = -1;
+        private string _transactionType = "";
 
-        public frmCashDeposit()
+        public FrmCashDeposit()
         {
             InitializeComponent();
         }
@@ -29,7 +29,7 @@ namespace ERPin.Modules.Cash
 
         private void txtTransactionType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TransactionType = txtTransactionType.SelectedItem.ToString();
+            _transactionType = txtTransactionType.SelectedItem.ToString();
 
         }
     }
