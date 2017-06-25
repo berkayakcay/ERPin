@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ERPin.Functions
+namespace ERPin.Models
 {
     using System;
     using System.Collections.Generic;
@@ -29,12 +29,12 @@ namespace ERPin.Functions
         public string Fax1 { get; set; }
         public string Fax2 { get; set; }
         public string Web { get; set; }
+        public string EMail { get; set; }
         public string Contact { get; set; }
+        public string ContactEmail { get; set; }
         public Nullable<System.DateTime> UpdatedDate { get; set; }
         public Nullable<int> CreatedUserId { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<int> UpdatedUserId { get; set; }
-        public string EMail { get; set; }
-        public string ContactEmail { get; set; }
     }
 }

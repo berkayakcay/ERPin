@@ -7,16 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ERPin.Functions
+namespace ERPin.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class CurrAccGroup
+    public partial class CashTransaction
     {
         public int Id { get; set; }
-        public string GroupCode { get; set; }
-        public string GroupName { get; set; }
+        public Nullable<int> CashAccId { get; set; }
+        public Nullable<int> CurrAccId { get; set; }
+        public string DocumentNumber { get; set; }
+        public string TransactionType { get; set; }
+        public Nullable<int> TransactionId { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
+        public string InOutCode { get; set; }
+        public Nullable<decimal> Amount { get; set; }
         public Nullable<int> CreatedUserId { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<int> UpdatedUserId { get; set; }

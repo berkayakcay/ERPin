@@ -7,24 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ERPin.Functions
+namespace ERPin.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Inventory
+    public partial class CurrAccGroup
     {
         public int Id { get; set; }
-        public string ItemCode { get; set; }
-        public string ItemName { get; set; }
-        public string Barcode { get; set; }
-        public string Unit { get; set; }
-        public Nullable<decimal> PurchasePrice { get; set; }
-        public Nullable<decimal> SalePrice { get; set; }
-        public Nullable<decimal> PurchaseTax { get; set; }
-        public Nullable<decimal> SaleTax { get; set; }
-        public Nullable<int> GroupId { get; set; }
-        public byte[] Picture { get; set; }
+        public string GroupCode { get; set; }
+        public string GroupName { get; set; }
         public Nullable<int> CreatedUserId { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<int> UpdatedUserId { get; set; }

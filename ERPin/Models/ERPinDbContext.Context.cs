@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ERPin.Functions
+namespace ERPin.Models
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ERPinEntities : DbContext
+    public partial class ERPinDbContext : DbContext
     {
-        public ERPinEntities()
-            : base("name=ERPinEntities")
+        public ERPinDbContext()
+            : base("name=ERPinDbContext")
         {
         }
     
@@ -25,10 +25,12 @@ namespace ERPin.Functions
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<CashAcc> CashAcc { get; set; }
+        public virtual DbSet<CashTransaction> CashTransaction { get; set; }
+        public virtual DbSet<CurrAcc> CurrAcc { get; set; }
+        public virtual DbSet<CurrAccGroup> CurrAccGroup { get; set; }
+        public virtual DbSet<CurrAccTransaction> CurrAccTransaction { get; set; }
         public virtual DbSet<Inventory> Inventory { get; set; }
         public virtual DbSet<InventoryGroup> InventoryGroup { get; set; }
-        public virtual DbSet<CurrAccGroup> CurrAccGroup { get; set; }
-        public virtual DbSet<CurrAcc> CurrAcc { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }
