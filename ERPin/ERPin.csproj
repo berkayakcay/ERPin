@@ -51,10 +51,12 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,45 +68,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Functions\CurrAcc.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Functions\CurrAccGroup.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Functions\Database.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Functions\Database.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Functions\Database.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Functions\Forms.cs" />
-    <Compile Include="Functions\Inventory.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Functions\InventoryGroup.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
     <Compile Include="Functions\Messages.cs" />
     <Compile Include="Functions\Numbers.cs" />
     <Compile Include="Functions\Pictures.cs" />
-    <Compile Include="Functions\sysdiagrams.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CashAcc.cs">
+      <DependentUpon>ERPinDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CashTransaction.cs">
+      <DependentUpon>ERPinDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CurrAcc.cs">
+      <DependentUpon>ERPinDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CurrAccGroup.cs">
+      <DependentUpon>ERPinDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CurrAccTransaction.cs">
+      <DependentUpon>ERPinDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ERPinDbContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERPinDbContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ERPinDbContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERPinDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ERPinDbContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERPinDbContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Inventory.cs">
+      <DependentUpon>ERPinDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InventoryGroup.cs">
+      <DependentUpon>ERPinDbContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Modules\Bank\frmBankAcc.cs">
       <SubType>Form</SubType>
@@ -222,6 +230,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\EFRepository.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="UnitOfWork\EFUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\IUnitOfWork.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -287,12 +299,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="Functions\Database.edmx">
+    <EntityDeploy Include="Models\ERPinDbContext.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Database.Designer.cs</LastGenOutput>
+      <LastGenOutput>ERPinDbContext.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Functions\Database.edmx.diagram">
-      <DependentUpon>Database.edmx</DependentUpon>
+    <None Include="Models\ERPinDbContext.edmx.diagram">
+      <DependentUpon>ERPinDbContext.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -309,16 +321,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Functions\Database.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Database.edmx</DependentUpon>
-      <LastGenOutput>Database.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Functions\Database.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Database.edmx</DependentUpon>
-      <LastGenOutput>Database.cs</LastGenOutput>
-    </Content>
     <None Include="Resources\InvoicePurchaseReturn32x32.png" />
     <None Include="Resources\InvoicePurchase32x32.png" />
     <None Include="Resources\InvoiceSaleReturn32x32.png" />
@@ -363,6 +365,17 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Models\ERPinDbContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ERPinDbContext.edmx</DependentUpon>
+      <LastGenOutput>ERPinDbContext.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ERPinDbContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ERPinDbContext.edmx</DependentUpon>
+      <LastGenOutput>ERPinDbContext.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
