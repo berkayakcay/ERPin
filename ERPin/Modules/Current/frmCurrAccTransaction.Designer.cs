@@ -1,6 +1,6 @@
 ﻿namespace ERPin.Modules.Current
 {
-    partial class frmCurrAccTransaction
+    partial class FrmCurrAccTransaction
     {
         /// <summary>
         /// Required designer variable.

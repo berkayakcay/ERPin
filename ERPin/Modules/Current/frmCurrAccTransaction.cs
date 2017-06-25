@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace ERPin.Modules.Current
 {
-    public partial class frmCurrAccTransaction : DevExpress.XtraEditors.XtraForm
+    public partial class FrmCurrAccTransaction : DevExpress.XtraEditors.XtraForm
     {
-        public frmCurrAccTransaction()
+        public FrmCurrAccTransaction()
         {
             InitializeComponent();
         }

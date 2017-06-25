@@ -9,28 +9,37 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using ERPin.Functions;
+using ERPin.Models;
+using ERPin.Repositories;
+using ERPin.UnitOfWork;
 
 namespace ERPin.Modules.Current
 {
-    public partial class frmCurrAccGroup : DevExpress.XtraEditors.XtraForm
+    public partial class FrmCurrAccGroup : DevExpress.XtraEditors.XtraForm
     {
         #region Fields
+        private ERPinDbContext _dbContext;
+        private IUnitOfWork _unitOfWork;
+        private IRepository<CurrAccGroup> _currAccGroupRepository;
 
-        Functions.ERPinEntities db = new ERPinEntities();
-        Functions.Messages messages = new Messages();
+        private readonly Messages _messages = new Messages();
 
         public bool Selection = false;
-        private bool Edit = false;
-        private int SelectionId = -1;
+        private bool _edit = false;
+        private int _selectionId = -1;
 
         #endregion
 
         /// <summary>
         /// 
         /// </summary>
-        public frmCurrAccGroup()
+        public FrmCurrAccGroup()
         {
             InitializeComponent();
+
+            _dbContext = new ERPinDbContext();
+            _unitOfWork = new EfUnitOfWork(_dbContext);
+            _currAccGroupRepository = _unitOfWork.GetRepository<CurrAccGroup>();
         }
 
         #region Events
@@ -52,7 +61,7 @@ namespace ERPin.Modules.Current
         /// <param name="e"></param>
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (Edit && SelectionId > 0 && messages.Update() == DialogResult.Yes)
+            if (_edit && _selectionId > 0 && _messages.Update() == DialogResult.Yes)
             {
                 UpdateRecord();
             }
@@ -69,7 +78,7 @@ namespace ERPin.Modules.Current
         /// <param name="e"></param>
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (Edit && SelectionId > 0 && messages.Delete() == DialogResult.Yes)
+            if (_edit && _selectionId > 0 && _messages.Delete() == DialogResult.Yes)
             {
                 DeleteRecord();
             }
@@ -88,9 +97,9 @@ namespace ERPin.Modules.Current
         private void gridView1_DoubleClick(object sender, EventArgs e)
         {
             SelectRecord();
-            if (Selection && SelectionId > 0)
+            if (Selection && _selectionId > 0)
             {
-                MainForm.Transfer = SelectionId;
+                MainForm.Transfer = _selectionId;
                 this.Close();
             }
         }
@@ -106,7 +115,7 @@ namespace ERPin.Modules.Current
         {
             try
             {
-                Functions.CurrAccGroup currAccGroup = new CurrAccGroup
+                CurrAccGroup currAccGroup = new CurrAccGroup
                 {
                     GroupCode = txtGroupCode.Text,
                     GroupName = txtGroupName.Text,
@@ -115,14 +124,14 @@ namespace ERPin.Modules.Current
                     UpdatedUserId = MainForm.UserId,
                     UpdatedDate = DateTime.Now
                 };
-                db.CurrAccGroup.Add(currAccGroup);
-                db.SaveChanges();
-                messages.Save("Created");
+                _currAccGroupRepository.Add(currAccGroup);
+                _unitOfWork.SaveChanges();
+                _messages.Save("Created");
                 ListRecord();
             }
             catch (Exception e)
             {
-                messages.Error(e);
+                _messages.Error(e);
             }
         }
 
@@ -133,7 +142,7 @@ namespace ERPin.Modules.Current
         {
             try
             {
-                Functions.CurrAccGroup currAccGroup = db.CurrAccGroup.Find(SelectionId);
+                CurrAccGroup currAccGroup =_currAccGroupRepository.GetById(_selectionId);
                 if (currAccGroup != null)
                 {
                     currAccGroup.GroupCode = txtGroupCode.Text;
@@ -141,13 +150,13 @@ namespace ERPin.Modules.Current
                     currAccGroup.UpdatedUserId = MainForm.UserId;
                     currAccGroup.UpdatedDate = DateTime.Now;
                 }
-                db.SaveChanges();
-                messages.Update("Updated");
+                _unitOfWork.SaveChanges();
+                _messages.Update("Updated");
                 ListRecord();
             }
             catch (Exception e)
             {
-                messages.Error(e);
+                _messages.Error(e);
             }
         }
 
@@ -158,13 +167,13 @@ namespace ERPin.Modules.Current
         {
             try
             {
-                db.CurrAccGroup.Remove(entity: db.CurrAccGroup.Find(SelectionId));
-                db.SaveChanges();
+                _currAccGroupRepository.Delete(_selectionId);
+                _unitOfWork.SaveChanges();
                 ClearRecord();
             }
             catch (Exception e)
             {
-                messages.Error(e);
+                _messages.Error(e);
             }
         }
 
@@ -173,7 +182,7 @@ namespace ERPin.Modules.Current
         /// </summary>
         void ListRecord()
         {
-            var list = db.CurrAccGroup.ToList();
+            var list = _currAccGroupRepository.GetAll();
             gcListe.DataSource = list;
         }
 
@@ -184,16 +193,16 @@ namespace ERPin.Modules.Current
         {
             try
             {
-                Edit = true;
-                SelectionId = (int)gridView1.GetFocusedRowCellValue("Id");
+                _edit = true;
+                _selectionId = (int)gridView1.GetFocusedRowCellValue("Id");
                 txtGroupCode.Text = gridView1.GetFocusedRowCellValue("GroupCode").ToString();
                 txtGroupName.Text = gridView1.GetFocusedRowCellValue("GroupName").ToString();
             }
             catch (Exception e)
             {
-                messages.Error(e);
-                Edit = false;
-                SelectionId = -1;
+                _messages.Error(e);
+                _edit = false;
+                _selectionId = -1;
             }
         }
 
@@ -204,8 +213,8 @@ namespace ERPin.Modules.Current
         {
             List<TextEdit> list = new List<TextEdit>();
             list.AddRange(gcCurrAccInfo.Controls.OfType<TextEdit>());
-            Edit = false;
-            SelectionId = -1;
+            _edit = false;
+            _selectionId = -1;
             ListRecord();
         }
 

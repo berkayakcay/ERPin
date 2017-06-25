@@ -1,6 +1,6 @@
 ﻿namespace ERPin.Modules.Current
 {
-    partial class frmCurrAccList
+    partial class FrmCurrAccList
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCurrAccList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCurrAccList));
             this.CurrAccCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnClear = new DevExpress.XtraEditors.SimpleButton();
@@ -218,7 +218,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmCurrAccList";
+            this.Name = "FrmCurrAccList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Current Account List";
             this.Load += new System.EventHandler(this.frmCurrAccList_Load);

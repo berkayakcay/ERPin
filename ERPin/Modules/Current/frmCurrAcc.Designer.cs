@@ -1,6 +1,6 @@
 ﻿namespace ERPin.Modules.Current
 {
-    partial class frmCurrAcc
+    partial class FrmCurrAcc
     {
         /// <summary>
         /// Required designer variable.
@@ -483,7 +483,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmCurrAcc";
+            this.Name = "FrmCurrAcc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Current Account";
             this.Load += new System.EventHandler(this.frmCurrAcc_Load);

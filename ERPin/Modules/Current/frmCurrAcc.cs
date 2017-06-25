@@ -9,29 +9,41 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using ERPin.Functions;
+using ERPin.Models;
+using ERPin.Repositories;
+using ERPin.UnitOfWork;
 
 namespace ERPin.Modules.Current
 {
-    public partial class frmCurrAcc : DevExpress.XtraEditors.XtraForm
+    public partial class FrmCurrAcc : DevExpress.XtraEditors.XtraForm
     {
         #region Fields
-        Functions.ERPinEntities db = new ERPinEntities();
-        Functions.Messages messages = new Messages();
-        Functions.Forms forms = new Forms();
-        Functions.Numbers numbers = new Numbers();
+        private ERPinDbContext _dbContext;
+        private IUnitOfWork _unitOfWork;
+        private IRepository<CurrAcc> _currAccRepository;
+        private IRepository<CurrAccGroup> _currAccGroupRepository;
 
-        private bool Edit = false;
-        private int CurrAccId = -1;
-        private int GroupId = -1;
+        private readonly Messages _messages = new Messages();
+        private readonly Forms _forms = new Forms();
+        private readonly Numbers _numbers = new Numbers();
+
+        private bool _edit = false;
+        private int _currAccId = -1;
+        private int _groupId = -1;
         #endregion
 
         #region Events
         /// <summary>
         /// 
         /// </summary>
-        public frmCurrAcc()
+        public FrmCurrAcc()
         {
             InitializeComponent();
+
+            _dbContext = new ERPinDbContext();
+            _unitOfWork = new EfUnitOfWork(_dbContext);
+            _currAccRepository = _unitOfWork.GetRepository<CurrAcc>();
+            _currAccGroupRepository = _unitOfWork.GetRepository<CurrAccGroup>();
         }
 
         /// <summary>
@@ -41,7 +53,7 @@ namespace ERPin.Modules.Current
         /// <param name="e"></param>
         private void frmCurrAcc_Load(object sender, EventArgs e)
         {
-            txtCurrAccCode.Text = numbers.LastCurrAccCode();
+            txtCurrAccCode.Text = _numbers.LastCurrAccCode();
         }
 
         /// <summary>
@@ -51,7 +63,7 @@ namespace ERPin.Modules.Current
         /// <param name="e"></param>
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (Edit && CurrAccId > 0 && messages.Update() == DialogResult.Yes)
+            if (_edit && _currAccId > 0 && _messages.Update() == DialogResult.Yes)
             {
                 UpdateRecord();
             }
@@ -68,7 +80,7 @@ namespace ERPin.Modules.Current
         /// <param name="e"></param>
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (Edit && CurrAccId > 0 && messages.Delete() == DialogResult.Yes)
+            if (_edit && _currAccId > 0 && _messages.Delete() == DialogResult.Yes)
             {
                 DeleteRecord();
             }
@@ -94,7 +106,7 @@ namespace ERPin.Modules.Current
         {
             try
             {
-                Functions.CurrAcc currAcc = new CurrAcc();
+                CurrAcc currAcc = new CurrAcc();
                 currAcc.CurrAccCode = txtCurrAccCode.Text;
                 currAcc.CurrAccName = txtCurrAccName.Text;
                 currAcc.GroupId = int.Parse(txtGroupCode.Text);
@@ -117,14 +129,15 @@ namespace ERPin.Modules.Current
                 currAcc.CreatedDate = DateTime.Now;
                 currAcc.UpdatedUserId = MainForm.UserId;
                 currAcc.UpdatedDate = DateTime.Now;
-                db.CurrAcc.Add(currAcc);
-                db.SaveChanges();
-                messages.Save("Created");
+
+                _currAccRepository.Add(currAcc);
+                _unitOfWork.SaveChanges();
+                _messages.Save("Created");
                 ClearRecord();
             }
             catch (Exception e)
             {
-                messages.Error(e);
+                _messages.Error(e);
             }
         }
 
@@ -135,7 +148,7 @@ namespace ERPin.Modules.Current
         {
             try
             {
-                Functions.CurrAcc currAcc = db.CurrAcc.Find(CurrAccId);
+                CurrAcc currAcc = _currAccRepository.GetById(_currAccId);
                 currAcc.CurrAccCode = txtCurrAccCode.Text;
                 currAcc.CurrAccName = txtCurrAccName.Text;
                 currAcc.GroupId = int.Parse(txtGroupCode.Text);
@@ -158,13 +171,13 @@ namespace ERPin.Modules.Current
                 currAcc.UpdatedUserId = MainForm.UserId;
                 currAcc.UpdatedDate = DateTime.Now;
 
-                db.SaveChanges();
-                messages.Update();
+                _unitOfWork.SaveChanges();
+                _messages.Update();
                 ClearRecord();
             }
             catch (Exception e)
             {
-                messages.Error(e);
+                _messages.Error(e);
             }
         }
 
@@ -175,13 +188,13 @@ namespace ERPin.Modules.Current
         {
             try
             {
-                db.CurrAcc.Remove(db.CurrAcc.Find(CurrAccId));
-                db.SaveChanges();
+                _currAccRepository.Delete(_currAccId);
+                _unitOfWork.SaveChanges();
                 ClearRecord();
             }
             catch (Exception e)
             {
-                messages.Error(e);
+                _messages.Error(e);
             }
         }
 
@@ -206,10 +219,10 @@ namespace ERPin.Modules.Current
             {
                 textEdit.Text = "";
             }
-            txtCurrAccCode.Text = numbers.LastCurrAccCode();
-            Edit = false;
-            CurrAccId = -1;
-            GroupId = -1;
+            txtCurrAccCode.Text = _numbers.LastCurrAccCode();
+            _edit = false;
+            _currAccId = -1;
+            _groupId = -1;
             MainForm.Transfer = -1;
         }
 
@@ -217,14 +230,14 @@ namespace ERPin.Modules.Current
         {
             try
             {
-                GroupId = id;
-                Functions.CurrAccGroup currAccGroup = db.CurrAccGroup.Find(GroupId);
+                _groupId = id;
+                CurrAccGroup currAccGroup = _currAccGroupRepository.GetById(_groupId);
                 txtGroupCode.Text = currAccGroup.GroupCode;
                 txtGroupName.Text = currAccGroup.GroupName;
             }
             catch (Exception e)
             {
-                messages.Error(e);
+                _messages.Error(e);
             }
         }
 
@@ -232,9 +245,9 @@ namespace ERPin.Modules.Current
         {
             try
             {
-                Edit = true;
-                CurrAccId = id;
-                Functions.CurrAcc currAcc = db.CurrAcc.Find(CurrAccId);
+                _edit = true;
+                _currAccId = id;
+                CurrAcc currAcc = _currAccRepository.GetById(_currAccId);
                 txtCurrAccCode.Text = currAcc.CurrAccCode;
                 txtCurrAccName.Text = currAcc.CurrAccName;
                 OpenGroup(currAcc.GroupId.Value);//Open group
@@ -255,7 +268,7 @@ namespace ERPin.Modules.Current
             }
             catch (Exception e)
             {
-                messages.Error(e);
+                _messages.Error(e);
             }
         }
 
@@ -263,7 +276,7 @@ namespace ERPin.Modules.Current
 
         private void txtCurrAccCode_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            int id = forms.CurrAccList(true);
+            int id = _forms.CurrAccList(true);
             if (id > 0)
             {
                 Open(id);
@@ -273,7 +286,7 @@ namespace ERPin.Modules.Current
 
         private void txtGroupCode_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            int id = forms.CurrAccGroup(true);
+            int id = _forms.CurrAccGroup(true);
             if (id > 0 )
             {
                 OpenGroup(id);

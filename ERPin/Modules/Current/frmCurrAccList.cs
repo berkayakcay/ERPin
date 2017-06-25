@@ -9,22 +9,31 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using ERPin.Functions;
+using ERPin.Models;
+using ERPin.Repositories;
+using ERPin.UnitOfWork;
 
 namespace ERPin.Modules.Current
 {
-    public partial class frmCurrAccList : DevExpress.XtraEditors.XtraForm
+    public partial class FrmCurrAccList : DevExpress.XtraEditors.XtraForm
     {
         #region Fields
-        Functions.ERPinEntities db = new ERPinEntities();
+        private ERPinDbContext _dbContext;
+        private IUnitOfWork _unitOfWork;
+        private IRepository<CurrAcc> _currAccRepository;
 
         public bool Selection = false;
-        private int SelectionId = -1;
+        private int _selectionId = -1;
         #endregion
 
         #region Events
-        public frmCurrAccList()
+        public FrmCurrAccList()
         {
             InitializeComponent();
+
+            _dbContext = new ERPinDbContext();
+            _unitOfWork = new EfUnitOfWork(_dbContext);
+            _currAccRepository = _unitOfWork.GetRepository<CurrAcc>();
         }
 
         private void frmCurrAccList_Load(object sender, EventArgs e)
@@ -36,7 +45,7 @@ namespace ERPin.Modules.Current
         #region Methods
         void ListRecord()
         {
-            List<CurrAcc> list = db.CurrAcc.Where(s => s.CurrAccCode.Contains(txtCurrAccCode.Text) && s.CurrAccName.Contains(txtCurrAccName.Text)).ToList();
+            var list = _currAccRepository.GetAll().Where(s => s.CurrAccCode.Contains(txtCurrAccCode.Text) && s.CurrAccName.Contains(txtCurrAccName.Text)).ToList();
             gcList.DataSource = list;
         }
 
@@ -44,11 +53,11 @@ namespace ERPin.Modules.Current
         {
             try
             {
-                SelectionId = int.Parse(gridView1.GetFocusedRowCellValue("Id").ToString());
+                _selectionId = int.Parse(gridView1.GetFocusedRowCellValue("Id").ToString());
             }
             catch (Exception)
             {
-                SelectionId = -1;
+                _selectionId = -1;
             }
         }
         #endregion
@@ -56,9 +65,9 @@ namespace ERPin.Modules.Current
         private void gcList_DoubleClick(object sender, EventArgs e)
         {
             SelectRecord();
-            if (Selection && SelectionId > 0)
+            if (Selection && _selectionId > 0)
             {
-                MainForm.Transfer = SelectionId;
+                MainForm.Transfer = _selectionId;
                 this.Close();
             }
         }

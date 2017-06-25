@@ -1,6 +1,6 @@
 ﻿namespace ERPin.Modules.Current
 {
-    partial class frmCurrAccGroup
+    partial class FrmCurrAccGroup
     {
         /// <summary>
         /// Required designer variable.
@@ -214,7 +214,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmCurrAccGroup";
+            this.Name = "FrmCurrAccGroup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CurrAccGroup";
             this.Load += new System.EventHandler(this.frmCurrAccGroup_Load);
