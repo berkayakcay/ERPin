@@ -12,33 +12,45 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using ERPin.Functions;
+using ERPin.Models;
+using ERPin.Repositories;
+using ERPin.UnitOfWork;
 
 namespace ERPin.Modules.Stock
 {
-    public partial class frmInventoryItem : DevExpress.XtraEditors.XtraForm
+    public partial class FrmInventoryItem : DevExpress.XtraEditors.XtraForm
     {
         #region Fields
-        Functions.ERPinEntities db = new ERPinEntities();
-        Functions.Messages messages = new Messages();
-        Functions.Numbers numbers = new Numbers();
-        Functions.Forms forms = new Forms();
-        Functions.Pictures pictures = new Pictures();
+        private ERPinDbContext _dbContext;
+        private IUnitOfWork _unitOfWork;
+        private IRepository<Inventory> _inventoryRepository;
+        private IRepository<InventoryGroup> _inventoryGroupRepository;
 
-        private bool Edit = false;
-        private bool Picture = false;
-        private int GroupId = -1;
-        private int ItemId = -1; 
+        private readonly Messages _messages = new Messages();
+        private readonly Numbers _numbers = new Numbers();
+        private readonly Forms _forms = new Forms();
+        private Pictures _pictures = new Pictures();
+
+        private bool _edit = false;
+        private bool _picture = false;
+        private int _groupId = -1;
+        private int _itemId = -1; 
         #endregion
 
         #region Events
-        public frmInventoryItem()
+        public FrmInventoryItem()
         {
             InitializeComponent();
+
+            _dbContext = new ERPinDbContext();
+            _unitOfWork = new EfUnitOfWork(_dbContext);
+            _inventoryRepository = _unitOfWork.GetRepository<Inventory>();
+            _inventoryGroupRepository = _unitOfWork.GetRepository<InventoryGroup>();
         }
 
         private void frmInventoryItem_Load(object sender, EventArgs e)
         {
-            txtItemCode.Text = numbers.LastInventoryItemCode();
+            txtItemCode.Text = _numbers.LastInventoryItemCode();
         }
 
         private void btnAddPicture_Click(object sender, EventArgs e)
@@ -48,7 +60,7 @@ namespace ERPin.Modules.Stock
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (Edit && ItemId > 0 && messages.Update() == DialogResult.Yes)
+            if (_edit && _itemId > 0 && _messages.Update() == DialogResult.Yes)
             {
                 UpdateRecord();
             }
@@ -61,7 +73,7 @@ namespace ERPin.Modules.Stock
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (Edit && ItemId > 0 && messages.Delete() == DialogResult.Yes) { messages.Delete(); }
+            if (_edit && _itemId > 0 && _messages.Delete() == DialogResult.Yes) { _messages.Delete(); }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -71,20 +83,20 @@ namespace ERPin.Modules.Stock
 
         private void txtItemCode_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            int Id = forms.InventoryList(true);
-            if (Id > 0)
+            int id = _forms.InventoryList(true);
+            if (id > 0)
             {
-                OpenItem(Id);
+                OpenItem(id);
             }
             MainForm.Transfer = -1;
         }
 
         private void txtGroupCode_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            int Id = forms.InventoryGroup(true);
-            if (Id > 0)
+            int id = _forms.InventoryGroup(true);
+            if (id > 0)
             {
-                OpenGroup(Id);
+                OpenGroup(id);
             }
             MainForm.Transfer = -1;
         }
@@ -101,7 +113,7 @@ namespace ERPin.Modules.Stock
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     pbItemPicture.ImageLocation = openFileDialog.FileName;
-                    Picture = true;
+                    _picture = true;
                 }
             }
         }
@@ -113,7 +125,7 @@ namespace ERPin.Modules.Stock
                 Inventory inventory = new Inventory();
                 inventory.ItemCode = txtItemCode.Text;
                 inventory.ItemName = txtItemName.Text;
-                inventory.GroupId = GroupId;
+                inventory.GroupId = _groupId;
                 inventory.Unit = txtUnit.Text;
                 inventory.Barcode = txtBarcode.Text;
                 inventory.PurchasePrice = decimal.Parse(txtPurchasePrice.Text);
@@ -122,15 +134,15 @@ namespace ERPin.Modules.Stock
                 inventory.SaleTax = decimal.Parse(txtSaleTax.Text);
                 inventory.CreatedDate = DateTime.Now;
                 inventory.CreatedUserId = MainForm.UserId;
-                if(Picture) inventory.Picture = pictures.UploadPicture(pbItemPicture.Image);
-                db.Inventory.Add(inventory);
-                db.SaveChanges();
-                messages.Save("New record has been created.");
+                if(_picture) inventory.Picture = _pictures.UploadPicture(pbItemPicture.Image);
+                _inventoryRepository.Add(inventory);
+                _unitOfWork.SaveChanges();
+                _messages.Save("New record has been created.");
                 ClearRecord();
             }
             catch (Exception e)
             {
-                messages.Error(e);
+                _messages.Error(e);
             }
         }
 
@@ -138,10 +150,10 @@ namespace ERPin.Modules.Stock
         {
             try
             {
-                Inventory inventory = db.Inventory.First(s => s.Id == ItemId);
+                Inventory inventory = _inventoryRepository.GetById(_itemId);
                 inventory.ItemCode = txtItemCode.Text;
                 inventory.ItemName = txtItemName.Text;
-                inventory.GroupId = GroupId;
+                inventory.GroupId = _groupId;
                 inventory.Unit = txtUnit.Text;
                 inventory.Barcode = txtBarcode.Text;
                 inventory.PurchasePrice = decimal.Parse(txtPurchasePrice.Text);
@@ -150,15 +162,15 @@ namespace ERPin.Modules.Stock
                 inventory.SaleTax = decimal.Parse(txtSaleTax.Text);
                 inventory.CreatedDate = DateTime.Now;
                 inventory.CreatedUserId = MainForm.UserId;
-                if (Picture) inventory.Picture = pictures.UploadPicture(pbItemPicture.Image);
+                if (_picture) inventory.Picture = _pictures.UploadPicture(pbItemPicture.Image);
 
-                db.SaveChanges();
-                messages.Update();
+                _unitOfWork.SaveChanges();
+                _messages.Update();
                 ClearRecord();
             }
             catch (Exception e)
             {
-                messages.Error(e);
+                _messages.Error(e);
             }
         }
 
@@ -166,13 +178,12 @@ namespace ERPin.Modules.Stock
         {
             try
             {
-                Inventory inventory = new Inventory { Id = ItemId };
-                db.Entry(inventory).State = EntityState.Deleted;
-                db.SaveChanges();
+                _inventoryRepository.Delete(_itemId);
+                _unitOfWork.SaveChanges();
             }
             catch (Exception e)
             {
-                messages.Error(e);
+                _messages.Error(e);
                 throw;
             }
         }
@@ -195,27 +206,28 @@ namespace ERPin.Modules.Stock
                 pbItemPicture.Image.Dispose();
                 pbItemPicture.Image = null;
             }
-            Edit = false;
-            Picture = false;
-            GroupId = -1;
-            ItemId = -1;
+            _edit = false;
+            _picture = false;
+            _groupId = -1;
+            _itemId = -1;
             MainForm.Transfer = -1;
         }
 
         void OpenGroup(int id)
         {
-            GroupId = id;
-            txtGroupCode.Text = db.InventoryGroup.First(s => s.Id == GroupId).GroupCode;
-            txtGroupName.Text = db.InventoryGroup.First(s => s.Id == GroupId).GroupName;
+            _groupId = id;
+            InventoryGroup inventoryGroup = _inventoryGroupRepository.GetById(_groupId);
+            txtGroupCode.Text = inventoryGroup.GroupCode;
+            txtGroupName.Text = inventoryGroup.GroupName;
         }
 
         void OpenItem(int id)
         {
-            Edit = true;
-            ItemId = id;
-            Functions.Inventory inventory = db.Inventory.First(s => s.Id == ItemId);
+            _edit = true;
+            _itemId = id;
+            Inventory inventory = _inventoryRepository.GetById(_itemId);
             OpenGroup(inventory.GroupId.Value);
-            pbItemPicture.Image = pictures.RetrievePicture(inventory.Picture.ToArray());
+            pbItemPicture.Image = _pictures.RetrievePicture(inventory.Picture.ToArray());
             txtItemCode.Text = inventory.ItemCode;
             txtItemName.Text = inventory.ItemName;
             txtBarcode.Text = inventory.Barcode;

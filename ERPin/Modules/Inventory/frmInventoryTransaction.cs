@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace ERPin.Modules.Stock
 {
-    public partial class frmInventoryTransaction : DevExpress.XtraEditors.XtraForm
+    public partial class FrmInventoryTransaction : DevExpress.XtraEditors.XtraForm
     {
-        public frmInventoryTransaction()
+        public FrmInventoryTransaction()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace ERPin.Modules.Stock
 {
-    partial class frmInventoryItem
+    partial class FrmInventoryItem
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInventoryItem));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInventoryItem));
             this.groupControlInventory = new DevExpress.XtraEditors.GroupControl();
             this.btnAddPicture = new DevExpress.XtraEditors.SimpleButton();
             this.pbItemPicture = new System.Windows.Forms.PictureBox();
@@ -410,7 +410,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmInventoryItem";
+            this.Name = "FrmInventoryItem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventory Item";
             this.Load += new System.EventHandler(this.frmInventoryItem_Load);

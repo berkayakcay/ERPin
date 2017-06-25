@@ -12,14 +12,14 @@ using ERPin.Functions;
 
 namespace ERPin.Modules.Stock
 {
-    public partial class frmInventoryList : DevExpress.XtraEditors.XtraForm
+    public partial class FrmInventoryList : DevExpress.XtraEditors.XtraForm
     {
-        Functions.ERPinEntities db = new ERPinEntities();
+        Functions.ERPinEntities _db = new ERPinEntities();
 
         public bool Selection = false;
-        private int SelectionId = -1;
+        private int _selectionId = -1;
 
-        public frmInventoryList()
+        public FrmInventoryList()
         {
             InitializeComponent();
         }
@@ -42,16 +42,16 @@ namespace ERPin.Modules.Stock
         private void gridView1_DoubleClick(object sender, EventArgs e)
         {
             SelectRecord();
-            if (Selection && SelectionId > 0)
+            if (Selection && _selectionId > 0)
             {
-                MainForm.Transfer = SelectionId;
+                MainForm.Transfer = _selectionId;
                 this.Close();
             }
         }
 
         void ListRecord()
         {
-            List<Inventory> list = db.Inventory.Where(x=> x.ItemCode.Contains(txtItemCode.Text) && x.ItemName.Contains(txtItemName.Text) && x.Barcode.Contains(txtItemBarcode.Text)).ToList();
+            List<Inventory> list = _db.Inventory.Where(x=> x.ItemCode.Contains(txtItemCode.Text) && x.ItemName.Contains(txtItemName.Text) && x.Barcode.Contains(txtItemBarcode.Text)).ToList();
             gcList.DataSource = list;
         }
 
@@ -69,12 +69,12 @@ namespace ERPin.Modules.Stock
         {
             try
             {
-                SelectionId = int.Parse(gridView1.GetFocusedRowCellValue("Id").ToString());
+                _selectionId = int.Parse(gridView1.GetFocusedRowCellValue("Id").ToString());
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                SelectionId = -1;
+                _selectionId = -1;
             }
         }
 

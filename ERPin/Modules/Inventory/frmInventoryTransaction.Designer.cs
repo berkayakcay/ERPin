@@ -1,6 +1,6 @@
 ﻿namespace ERPin.Modules.Stock
 {
-    partial class frmInventoryTransaction
+    partial class FrmInventoryTransaction
     {
         /// <summary>
         /// Required designer variable.
