@@ -1,6 +1,6 @@
 ﻿namespace ERPin.Modules.Invoice
 {
-    partial class FrmInvoiceList
+    partial class frmInvoiceList
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInvoiceList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInvoiceList));
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
@@ -39,13 +39,13 @@
             this.txtItemCode = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtItemBarcode = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.txtItemName = new DevExpress.XtraEditors.DateEdit();
             this.gcList = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ItemCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ItemName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Barcode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.txtItemName = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -53,10 +53,10 @@
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtItemCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtItemBarcode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemName.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemName.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemName.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -156,24 +156,6 @@
             this.txtItemBarcode.Size = new System.Drawing.Size(162, 20);
             this.txtItemBarcode.TabIndex = 5;
             // 
-            // txtItemName
-            // 
-            this.txtItemName.EditValue = "";
-            this.txtItemName.Location = new System.Drawing.Point(11, 90);
-            this.txtItemName.Name = "txtItemName";
-            this.txtItemName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtItemName.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtItemName.Properties.DisplayFormat.FormatString = "";
-            this.txtItemName.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.txtItemName.Properties.EditFormat.FormatString = "";
-            this.txtItemName.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.txtItemName.Properties.Mask.EditMask = "";
-            this.txtItemName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtItemName.Size = new System.Drawing.Size(162, 20);
-            this.txtItemName.TabIndex = 3;
-            // 
             // gcList
             // 
             this.gcList.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -232,15 +214,30 @@
             this.Barcode.Visible = true;
             this.Barcode.VisibleIndex = 2;
             // 
-            // FrmInvoiceList
+            // txtItemName
+            // 
+            this.txtItemName.EditValue = "";
+            this.txtItemName.Location = new System.Drawing.Point(11, 90);
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtItemName.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtItemName.Properties.DisplayFormat.FormatString = "";
+            this.txtItemName.Properties.EditFormat.FormatString = "";
+            this.txtItemName.Properties.Mask.EditMask = "";
+            this.txtItemName.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.txtItemName.Size = new System.Drawing.Size(162, 20);
+            this.txtItemName.TabIndex = 3;
+            // 
+            // frmInvoiceList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(858, 569);
             this.Controls.Add(this.splitContainerControl1);
-            this.Name = "FrmInvoiceList";
+            this.Name = "frmInvoiceList";
             this.Text = "frmInvoiceList";
-            this.Load += new System.EventHandler(this.FrmInvoiceList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
@@ -249,10 +246,10 @@
             this.xtraTabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtItemCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtItemBarcode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemName.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemName.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemName.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

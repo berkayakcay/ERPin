@@ -11,16 +11,11 @@ using DevExpress.XtraEditors;
 
 namespace ERPin.Modules.Invoice
 {
-    public partial class FrmInvoiceList : DevExpress.XtraEditors.XtraForm
+    public partial class frmInvoiceList : DevExpress.XtraEditors.XtraForm
     {
-        public FrmInvoiceList()
+        public frmInvoiceList()
         {
             InitializeComponent();
-        }
-
-        private void FrmInvoiceList_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
