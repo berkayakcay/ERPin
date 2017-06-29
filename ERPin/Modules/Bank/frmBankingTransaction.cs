@@ -11,14 +11,14 @@ using DevExpress.XtraEditors;
 
 namespace ERPin.Modules.Bank
 {
-    public partial class frmBankingTransaction : DevExpress.XtraEditors.XtraForm
+    public partial class FrmBankingTransaction : DevExpress.XtraEditors.XtraForm
     {
         #region Fields
-        private int TransactionId = -1;
+        private int _transactionId = -1;
         #endregion
 
         #region Events
-        public frmBankingTransaction()
+        public FrmBankingTransaction()
         {
             InitializeComponent();
         }

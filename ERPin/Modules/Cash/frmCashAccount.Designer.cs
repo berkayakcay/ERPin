@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.Balance = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.BankName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CashAccCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.AccountType = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CashAccName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Description = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcList = new DevExpress.XtraGrid.GridControl();
             this.groupControlCashAccList = new DevExpress.XtraEditors.GroupControl();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
@@ -66,18 +67,19 @@
             this.Balance.OptionsColumn.FixedWidth = true;
             this.Balance.Visible = true;
             this.Balance.VisibleIndex = 2;
+            this.Balance.Width = 55;
             // 
-            // BankName
+            // CashAccCode
             // 
-            this.BankName.Caption = "BankName";
-            this.BankName.FieldName = "BankName";
-            this.BankName.Name = "BankName";
-            this.BankName.OptionsColumn.AllowEdit = false;
-            this.BankName.OptionsColumn.AllowFocus = false;
-            this.BankName.OptionsColumn.FixedWidth = true;
-            this.BankName.Visible = true;
-            this.BankName.VisibleIndex = 0;
-            this.BankName.Width = 263;
+            this.CashAccCode.Caption = "CashAccCode";
+            this.CashAccCode.FieldName = "CashAccCode";
+            this.CashAccCode.Name = "CashAccCode";
+            this.CashAccCode.OptionsColumn.AllowEdit = false;
+            this.CashAccCode.OptionsColumn.AllowFocus = false;
+            this.CashAccCode.OptionsColumn.FixedWidth = true;
+            this.CashAccCode.Visible = true;
+            this.CashAccCode.VisibleIndex = 0;
+            this.CashAccCode.Width = 80;
             // 
             // Id
             // 
@@ -89,24 +91,35 @@
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.Id,
-            this.BankName,
-            this.AccountType,
-            this.Balance});
+            this.CashAccCode,
+            this.CashAccName,
+            this.Balance,
+            this.Description});
             this.gridView1.GridControl = this.gcList;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
-            // AccountType
+            // CashAccName
             // 
-            this.AccountType.Caption = "AccountType";
-            this.AccountType.FieldName = "AccountType";
-            this.AccountType.Name = "AccountType";
-            this.AccountType.OptionsColumn.AllowEdit = false;
-            this.AccountType.OptionsColumn.AllowFocus = false;
-            this.AccountType.OptionsColumn.FixedWidth = true;
-            this.AccountType.Visible = true;
-            this.AccountType.VisibleIndex = 1;
-            this.AccountType.Width = 137;
+            this.CashAccName.Caption = "CashAccName";
+            this.CashAccName.FieldName = "CashAccName";
+            this.CashAccName.Name = "CashAccName";
+            this.CashAccName.OptionsColumn.AllowEdit = false;
+            this.CashAccName.OptionsColumn.AllowFocus = false;
+            this.CashAccName.OptionsColumn.FixedWidth = true;
+            this.CashAccName.Visible = true;
+            this.CashAccName.VisibleIndex = 1;
+            this.CashAccName.Width = 118;
+            // 
+            // Description
+            // 
+            this.Description.Caption = "Description";
+            this.Description.FieldName = "Description";
+            this.Description.Name = "Description";
+            this.Description.Visible = true;
+            this.Description.VisibleIndex = 3;
+            this.Description.Width = 139;
             // 
             // gcList
             // 
@@ -136,7 +149,7 @@
             this.btnClose.Location = new System.Drawing.Point(329, 111);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 38);
-            this.btnClose.TabIndex = 4;
+            this.btnClose.TabIndex = 5;
             this.btnClose.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -156,7 +169,7 @@
             this.btnSave.Location = new System.Drawing.Point(329, 23);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 38);
-            this.btnSave.TabIndex = 0;
+            this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -199,7 +212,7 @@
             this.txtCashAccName.Location = new System.Drawing.Point(124, 49);
             this.txtCashAccName.Name = "txtCashAccName";
             this.txtCashAccName.Size = new System.Drawing.Size(199, 20);
-            this.txtCashAccName.TabIndex = 2;
+            this.txtCashAccName.TabIndex = 1;
             // 
             // labelControl1
             // 
@@ -221,9 +234,9 @@
             this.txtDescription.Location = new System.Drawing.Point(124, 75);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(199, 74);
-            this.txtDescription.TabIndex = 8;
+            this.txtDescription.TabIndex = 2;
             // 
-            // frmCashAccount
+            // FrmCashAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -254,10 +267,10 @@
         #endregion
 
         private DevExpress.XtraGrid.Columns.GridColumn Balance;
-        private DevExpress.XtraGrid.Columns.GridColumn BankName;
+        private DevExpress.XtraGrid.Columns.GridColumn CashAccCode;
         private DevExpress.XtraGrid.Columns.GridColumn Id;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn AccountType;
+        private DevExpress.XtraGrid.Columns.GridColumn CashAccName;
         private DevExpress.XtraGrid.GridControl gcList;
         private DevExpress.XtraEditors.GroupControl groupControlCashAccList;
         private DevExpress.XtraEditors.SimpleButton btnClose;
@@ -270,5 +283,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TextEdit txtCashAccCode;
         private DevExpress.XtraEditors.MemoEdit txtDescription;
+        private DevExpress.XtraGrid.Columns.GridColumn Description;
     }
 }

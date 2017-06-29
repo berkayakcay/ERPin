@@ -95,10 +95,31 @@ namespace ERPin.Modules.Current
         {
             this.Close();
         }
+
+        private void txtCurrAccCode_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            int id = _forms.CurrAccList(true);
+            if (id > 0)
+            {
+                Open(id);
+            }
+            MainForm.Transfer = -1;
+        }
+
+        private void txtGroupCode_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            int id = _forms.CurrAccGroup(true);
+            if (id > 0 )
+            {
+                OpenGroup(id);
+            }
+            MainForm.Transfer = -1;
+        }
         #endregion
 
 
         #region Methods
+
         /// <summary>
         /// 
         /// </summary>
@@ -273,25 +294,5 @@ namespace ERPin.Modules.Current
         }
 
         #endregion
-
-        private void txtCurrAccCode_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        {
-            int id = _forms.CurrAccList(true);
-            if (id > 0)
-            {
-                Open(id);
-            }
-            MainForm.Transfer = -1;
-        }
-
-        private void txtGroupCode_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        {
-            int id = _forms.CurrAccGroup(true);
-            if (id > 0 )
-            {
-                OpenGroup(id);
-            }
-            MainForm.Transfer = -1;
-        }
     }
 }

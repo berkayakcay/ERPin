@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ERPin.Modules.Cash;
 using ERPin.Modules.Current;
 using ERPin.Modules.Stock;
 
@@ -11,26 +12,26 @@ namespace ERPin.Functions
     class Forms
     {
         #region Inventory
-        public void InventoryItem(bool Open = false)
+        public void InventoryItem(bool open = false)
         {
-            frmInventoryItem inventoryItem = new frmInventoryItem();
+            FrmInventoryItem inventoryItem = new FrmInventoryItem();
             inventoryItem.ShowDialog();
         }
 
-        public int InventoryGroup(bool Selection = false)
+        public int InventoryGroup(bool selection = false)
         {
-            frmInventoryGroup inventoryGroup = new frmInventoryGroup();
-            if (Selection) inventoryGroup.Selection = Selection;
+            FrmInventoryGroup inventoryGroup = new FrmInventoryGroup();
+            if (selection) inventoryGroup.Selection = selection;
             inventoryGroup.ShowDialog();
             return MainForm.Transfer;
         }
 
-        public int InventoryList(bool Selection = false)
+        public int InventoryList(bool selection = false)
         {
-            frmInventoryList inventoryList = new frmInventoryList();
-            if (Selection)
+            FrmInventoryList inventoryList = new FrmInventoryList();
+            if (selection)
             {
-                inventoryList.Selection = Selection;
+                inventoryList.Selection = selection;
                 inventoryList.ShowDialog();
             }
             else
@@ -41,42 +42,41 @@ namespace ERPin.Functions
             return MainForm.Transfer;
         }
 
-        public void InventoryTransaction(bool Open = false)
+        public void InventoryTransaction(bool open = false)
         {
 
         }
-
         #endregion
 
-        #region Current Account
 
-        public void CurrAcc(bool Open = false, int CurrAccId = -1)
+        #region Current Account
+        public void CurrAcc(bool open = false, int currAccId = -1)
         {
-            frmCurrAcc currAcc = new frmCurrAcc();
-            if (Open)
+            FrmCurrAcc currAcc = new FrmCurrAcc();
+            if (open)
             {
-                currAcc.Open(CurrAccId);
+                currAcc.Open(currAccId);
             }
             currAcc.ShowDialog();
         }
 
-        public int CurrAccGroup(bool Selection = false)
+        public int CurrAccGroup(bool selection = false)
         {
-            Modules.Current.frmCurrAccGroup currAccGroup = new frmCurrAccGroup();
-            if (Selection)
+            Modules.Current.FrmCurrAccGroup currAccGroup = new FrmCurrAccGroup();
+            if (selection)
             {
-                currAccGroup.Selection = Selection;
+                currAccGroup.Selection = selection;
             }
             currAccGroup.ShowDialog();
             return MainForm.Transfer;
         }
 
-        public int CurrAccList(bool Selection = false)
+        public int CurrAccList(bool selection = false)
         {
-            Modules.Current.frmCurrAccList currAccList = new frmCurrAccList();
-            if (Selection)
+            Modules.Current.FrmCurrAccList currAccList = new FrmCurrAccList();
+            if (selection)
             {
-                currAccList.Selection = Selection;
+                currAccList.Selection = selection;
                 currAccList.ShowDialog();
             }
             else
@@ -84,6 +84,52 @@ namespace ERPin.Functions
                 currAccList.MdiParent = MainForm.ActiveForm;
                 currAccList.Show();
             }
+            return MainForm.Transfer;
+        }
+        #endregion
+
+
+        #region Cash Account
+        public void CashAccount()
+        {
+            Modules.Cash.FrmCashAccount cashAccount = new FrmCashAccount();
+            cashAccount.ShowDialog();
+        }
+
+        public void CashDeposit(bool open = false, int id = -1)
+        {
+            FrmCashDeposit cashDeposit = new FrmCashDeposit();
+            if (open)
+            {
+                cashDeposit.OpenCashDeposit(id);
+            }
+            cashDeposit.ShowDialog();
+        }
+
+        public void CashTransaction(bool open = false, int TransactionId = -1)
+        {
+            Modules.Cash.FrmCashTransfer cashTransfer = new FrmCashTransfer();
+            if (open)
+            {
+                cashTransfer.OpenCashTransfer(TransactionId);
+            }
+            cashTransfer.ShowDialog();
+        }
+
+        public int CashList(bool Selection = false)
+        {
+            Modules.Cash.FrmCashList cashList = new FrmCashList();
+            if (Selection)
+            {
+                cashList.Selection = Selection;
+                cashList.ShowDialog();
+            }
+            else
+            {
+                cashList.MdiParent = MainForm.ActiveForm;
+                cashList.Show();
+            }
+
             return MainForm.Transfer;
         }
         #endregion

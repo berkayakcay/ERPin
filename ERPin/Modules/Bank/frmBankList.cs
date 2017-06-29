@@ -11,12 +11,12 @@ using DevExpress.XtraEditors;
 
 namespace ERPin.Modules.Bank
 {
-    public partial class frmBankList : DevExpress.XtraEditors.XtraForm
+    public partial class FrmBankList : DevExpress.XtraEditors.XtraForm
     {
-        private bool Selection = false;
-        private int SelectionId = -1;
+        private bool _selection = false;
+        private int _selectionId = -1;
 
-        public frmBankList()
+        public FrmBankList()
         {
             InitializeComponent();
         }

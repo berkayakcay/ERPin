@@ -23,6 +23,7 @@ namespace ERPin.Models
         public Nullable<System.DateTime> Date { get; set; }
         public string InOutCode { get; set; }
         public Nullable<decimal> Amount { get; set; }
+        public string Description { get; set; }
         public Nullable<int> CreatedUserId { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<int> UpdatedUserId { get; set; }

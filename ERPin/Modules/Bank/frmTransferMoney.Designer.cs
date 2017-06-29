@@ -1,6 +1,6 @@
 ﻿namespace ERPin.Modules.Bank
 {
-    partial class frmTransferMoney
+    partial class FrmTransferMoney
     {
         /// <summary>
         /// Required designer variable.
@@ -339,7 +339,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmTransferMoney";
+            this.Name = "FrmTransferMoney";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transfer Money";
             this.Load += new System.EventHandler(this.frmBankList_Load);

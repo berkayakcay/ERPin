@@ -9,12 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using ERPin.Functions;
+using ERPin.Models;
+using ERPin.Repositories;
+using ERPin.UnitOfWork;
 
 namespace ERPin.Modules.Stock
 {
     public partial class FrmInventoryList : DevExpress.XtraEditors.XtraForm
     {
-        Functions.ERPinEntities _db = new ERPinEntities();
+        private ERPinDbContext _dbContext;
+        private IUnitOfWork _unitOfWork;
+        private IRepository<Inventory> _inventoryRepository;
 
         public bool Selection = false;
         private int _selectionId = -1;
@@ -22,6 +27,10 @@ namespace ERPin.Modules.Stock
         public FrmInventoryList()
         {
             InitializeComponent();
+
+            _dbContext = new ERPinDbContext();
+            _unitOfWork = new EfUnitOfWork(_dbContext);
+            _inventoryRepository = _unitOfWork.GetRepository<Inventory>();
         }
 
         private void frmInventoryList_Load(object sender, EventArgs e)
@@ -51,7 +60,7 @@ namespace ERPin.Modules.Stock
 
         void ListRecord()
         {
-            List<Inventory> list = _db.Inventory.Where(x=> x.ItemCode.Contains(txtItemCode.Text) && x.ItemName.Contains(txtItemName.Text) && x.Barcode.Contains(txtItemBarcode.Text)).ToList();
+            var list = _inventoryRepository.GetAll().Where(x=> x.ItemCode.Contains(txtItemCode.Text) && x.ItemName.Contains(txtItemName.Text) && x.Barcode.Contains(txtItemBarcode.Text)).ToList();
             gcList.DataSource = list;
         }
 
