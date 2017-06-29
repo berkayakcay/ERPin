@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace ERPin.Modules.Bank
 {
-    public partial class frmBanking : DevExpress.XtraEditors.XtraForm
+    public partial class FrmBanking : DevExpress.XtraEditors.XtraForm
     {
-        public frmBanking()
+        public FrmBanking()
         {
             InitializeComponent();
         }

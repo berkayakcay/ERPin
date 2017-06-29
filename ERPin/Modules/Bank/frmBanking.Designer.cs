@@ -1,6 +1,6 @@
 ﻿namespace ERPin.Modules.Bank
 {
-    partial class frmBanking
+    partial class FrmBanking
     {
         /// <summary>
         /// Required designer variable.
@@ -254,7 +254,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmBanking";
+            this.Name = "FrmBanking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Banking";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
