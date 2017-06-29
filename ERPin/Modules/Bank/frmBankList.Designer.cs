@@ -1,6 +1,6 @@
 ﻿namespace ERPin.Modules.Bank
 {
-    partial class FrmBankList
+    partial class frmBankList
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBankList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBankList));
             this.Barcode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ItemCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Id = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -227,7 +227,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmBankList";
+            this.Name = "frmBankList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Bank List";
             this.Load += new System.EventHandler(this.frmBankList_Load);
