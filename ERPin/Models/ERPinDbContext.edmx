@@ -31,6 +31,7 @@
           <Property Name="Date" Type="datetime" />
           <Property Name="InOutCode" Type="nvarchar" MaxLength="3" />
           <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Description" Type="text" />
           <Property Name="CreatedUserId" Type="int" />
           <Property Name="CreatedDate" Type="datetime" />
           <Property Name="UpdatedUserId" Type="int" />
@@ -165,6 +166,7 @@
           <Property Name="Date" Type="DateTime" Precision="3" />
           <Property Name="InOutCode" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
           <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="CreatedUserId" Type="Int32" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
           <Property Name="UpdatedUserId" Type="Int32" />
@@ -259,7 +261,7 @@
           <Property Name="UpdatedUserId" Type="Int32" />
           <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
         </EntityType>
-        <EntityContainer Name="ERPinDbContext" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ERPinEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CashAcc" EntityType="Self.CashAcc" />
           <EntitySet Name="CashTransaction" EntityType="Self.CashTransaction" />
           <EntitySet Name="CurrAcc" EntityType="Self.CurrAcc" />
@@ -273,7 +275,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ERPinModelStoreContainer" CdmEntityContainer="ERPinDbContext">
+        <EntityContainerMapping StorageEntityContainer="ERPinModelStoreContainer" CdmEntityContainer="ERPinEntities">
           <EntitySetMapping Name="CashAcc">
             <EntityTypeMapping TypeName="ERPinModel.CashAcc">
               <MappingFragment StoreEntitySet="CashAcc">
@@ -300,6 +302,7 @@
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="InOutCode" ColumnName="InOutCode" />
                 <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="CreatedUserId" ColumnName="CreatedUserId" />
                 <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
                 <ScalarProperty Name="UpdatedUserId" ColumnName="UpdatedUserId" />
