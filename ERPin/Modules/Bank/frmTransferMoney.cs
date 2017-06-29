@@ -11,11 +11,11 @@ using DevExpress.XtraEditors;
 
 namespace ERPin.Modules.Bank
 {
-    public partial class FrmTransferMoney : DevExpress.XtraEditors.XtraForm
+    public partial class frmTransferMoney : DevExpress.XtraEditors.XtraForm
     {
-        private string _transactionType = "Bank Transfer";
+        private string TransactionType = "Bank Transfer";
 
-        public FrmTransferMoney()
+        public frmTransferMoney()
         {
             InitializeComponent();
         }
@@ -26,13 +26,13 @@ namespace ERPin.Modules.Bank
             {
                 rBtnInflow.Text = "Inflow Transfer";
                 rBtnOutflow.Text = "Outflow Transfer";
-                _transactionType = "Bank Transfer";
+                TransactionType = "Bank Transfer";
             }
             else if(txtTransferType.SelectedIndex == 1)
             {
                 rBtnInflow.Text = "Inflow EFT";
                 rBtnOutflow.Text = "Outflow EFT";
-                _transactionType = "Bank EFT";
+                TransactionType = "Bank EFT";
             }
         }
 
