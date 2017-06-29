@@ -11,16 +11,16 @@ using DevExpress.XtraEditors;
 
 namespace ERPin.Modules.Bank
 {
-    public partial class frmBankAcc : DevExpress.XtraEditors.XtraForm
+    public partial class FrmBankAcc : DevExpress.XtraEditors.XtraForm
     {
         #region Fields
-        private bool Edit = false;
-        private int SelectionId = -1;
+        private bool _edit = false;
+        private int _selectionId = -1;
         #endregion
 
 
         #region Events
-        public frmBankAcc()
+        public FrmBankAcc()
         {
             InitializeComponent();
         }
