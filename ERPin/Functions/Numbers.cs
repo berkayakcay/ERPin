@@ -3,18 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ERPin.Models;
 
 namespace ERPin.Functions
 {
     class Numbers
     {
-        private readonly ERPinDbContext _db = new ERPinDbContext();
+        private readonly ERPinEntities _db = new ERPinEntities();
 
-        /// <summary>
-        /// Get lastest item account code from database
-        /// </summary>
-        /// <returns></returns>
         public string LastInventoryItemCode()
         {
             string num = "";
@@ -25,7 +20,7 @@ namespace ERPin.Functions
                 {
                     int number = int.Parse(firstOrDefault);
                     number++;
-                    num = number.ToString().PadLeft(8 - LenHelper(number), '0');
+                    num = number.ToString().PadLeft(8 - lenHelper(number), '0');
                     return num;
                 }
             }
@@ -47,11 +42,11 @@ namespace ERPin.Functions
             try
             {
                 var firstOrDefault = _db.CurrAcc.OrderByDescending(x => x.CurrAccCode).Select(s => s.CurrAccCode).FirstOrDefault();
-                if (firstOrDefault != null)
+                if (firstOrDefault!=null)
                 {
                     int number = int.Parse(firstOrDefault);
                     number++;
-                    num = number.ToString().PadLeft(5 - LenHelper(number), '0');
+                    num = number.ToString().PadLeft(5 - lenHelper(number), '0');
                     return num;
                 }
                 return num;
@@ -63,33 +58,7 @@ namespace ERPin.Functions
             return num;
         }
 
-        /// <summary>
-        /// Get lastest cash account code from database
-        /// </summary>
-        /// <returns></returns>
-        public string LastCashAccCode()
-        {
-            string num = "00001";
-            try
-            {
-                var firstOrDefault = _db.CashAcc.OrderByDescending(x => x.CashAccCode).Select(s => s.CashAccCode).FirstOrDefault();
-                if (firstOrDefault != null)
-                {
-                    int number = int.Parse(firstOrDefault);
-                    number++;
-                    num = number.ToString().PadLeft(5 - LenHelper(number), '0');
-                    return num;
-                }
-                return num;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
-            return num;
-        }
-        
-        int LenHelper(int x)
+        int lenHelper(int x)
         {
             if (x >= 1000000000) return 10;
             if (x >= 100000000) return 9;

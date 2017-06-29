@@ -54,8 +54,6 @@
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
-            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
-            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.rpInventory = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpCurrent = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -69,7 +67,8 @@
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.barBtnNebimV3Connection = new DevExpress.XtraBars.BarButtonItem();
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -103,10 +102,9 @@
             this.barButtonItem5,
             this.barButtonItem6,
             this.barStaticItem1,
-            this.barStaticItem2,
-            this.barBtnNebimV3Connection});
+            this.barStaticItem2});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 34;
+            this.ribbon.MaxItemId = 33;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpInventory,
@@ -114,7 +112,6 @@
             this.rpBank,
             this.rpCash,
             this.rpInvoice});
-            this.ribbon.QuickToolbarItemLinks.Add(this.barBtnNebimV3Connection);
             this.ribbon.Size = new System.Drawing.Size(788, 162);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
@@ -245,7 +242,6 @@
             this.barBtnCashAccount.ImageOptions.LargeImage = global::ERPin.Properties.Resources.CashAccount32x32;
             this.barBtnCashAccount.LargeWidth = 100;
             this.barBtnCashAccount.Name = "barBtnCashAccount";
-            this.barBtnCashAccount.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnCashAccount_ItemClick);
             // 
             // barBtnCashList
             // 
@@ -254,7 +250,6 @@
             this.barBtnCashList.ImageOptions.LargeImage = global::ERPin.Properties.Resources.CashList32x32;
             this.barBtnCashList.LargeWidth = 100;
             this.barBtnCashList.Name = "barBtnCashList";
-            this.barBtnCashList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnCashList_ItemClick);
             // 
             // barBCashTransfer
             // 
@@ -263,7 +258,6 @@
             this.barBCashTransfer.ImageOptions.LargeImage = global::ERPin.Properties.Resources.CashTransfer32x32;
             this.barBCashTransfer.LargeWidth = 100;
             this.barBCashTransfer.Name = "barBCashTransfer";
-            this.barBCashTransfer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBCashTransfer_ItemClick);
             // 
             // barBCashDeposit
             // 
@@ -272,7 +266,6 @@
             this.barBCashDeposit.ImageOptions.LargeImage = global::ERPin.Properties.Resources.CashDeposit32x32;
             this.barBCashDeposit.LargeWidth = 100;
             this.barBCashDeposit.Name = "barBCashDeposit";
-            this.barBCashDeposit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBCashDeposit_ItemClick);
             // 
             // barButtonItem1
             // 
@@ -321,19 +314,6 @@
             this.barButtonItem6.ImageOptions.LargeImage = global::ERPin.Properties.Resources.InvoicePurchaseReturn32x32;
             this.barButtonItem6.LargeWidth = 100;
             this.barButtonItem6.Name = "barButtonItem6";
-            // 
-            // barStaticItem1
-            // 
-            this.barStaticItem1.Caption = "ERPin Open Source evermore";
-            this.barStaticItem1.Id = 31;
-            this.barStaticItem1.Name = "barStaticItem1";
-            // 
-            // barStaticItem2
-            // 
-            this.barStaticItem2.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barStaticItem2.Caption = "01.01.2017";
-            this.barStaticItem2.Id = 32;
-            this.barStaticItem2.Name = "barStaticItem2";
             // 
             // rpInventory
             // 
@@ -443,12 +423,18 @@
             this.xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
-            // barBtnNebimV3Connection
+            // barStaticItem1
             // 
-            this.barBtnNebimV3Connection.Caption = "NebimV3 Connection";
-            this.barBtnNebimV3Connection.Id = 33;
-            this.barBtnNebimV3Connection.Name = "barBtnNebimV3Connection";
-            this.barBtnNebimV3Connection.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnNebimV3Connection_ItemClick);
+            this.barStaticItem1.Caption = "ERPin Open Source evermore";
+            this.barStaticItem1.Id = 31;
+            this.barStaticItem1.Name = "barStaticItem1";
+            // 
+            // barStaticItem2
+            // 
+            this.barStaticItem2.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barStaticItem2.Caption = "01.01.2017";
+            this.barStaticItem2.Id = 32;
+            this.barStaticItem2.Name = "barStaticItem2";
             // 
             // MainForm
             // 
@@ -513,6 +499,5 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem2;
-        private DevExpress.XtraBars.BarButtonItem barBtnNebimV3Connection;
     }
 }

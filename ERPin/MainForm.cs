@@ -9,13 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 using ERPin.Functions;
-using ERPin.Managers;
 
 namespace ERPin
 {
     public partial class MainForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        Functions.Forms _forms = new Forms();
+        Functions.Forms forms = new Forms();
 
         public static int UserId = -1;
         public static int Transfer = -1;
@@ -33,73 +32,45 @@ namespace ERPin
         #region Inventory
         private void barBtnInventoryItem_ItemClick(object sender, ItemClickEventArgs e)
         {
-            _forms.InventoryItem();
+            forms.InventoryItem();
         }
 
         private void barBtnInventoryGroup_ItemClick(object sender, ItemClickEventArgs e)
         {
-            _forms.InventoryGroup();
+            forms.InventoryGroup();
         }
 
         private void barBtnInventoryList_ItemClick(object sender, ItemClickEventArgs e)
         {
-            _forms.InventoryList();
+            forms.InventoryList();
         }
 
         private void barBtnInventoryTransaction_ItemClick(object sender, ItemClickEventArgs e)
         {
-            _forms.InventoryTransaction();
+            forms.InventoryTransaction();
         }
         #endregion
 
         #region Current Account
         private void barBtnCurrAcc_ItemClick(object sender, ItemClickEventArgs e)
         {
-            _forms.CurrAcc();
+            forms.CurrAcc();
         }
 
         private void barBtnCurrAccGroup_ItemClick(object sender, ItemClickEventArgs e)
         {
-            _forms.CurrAccGroup();
+            forms.CurrAccGroup();
         }
 
         private void barBtnCurrAccList_ItemClick(object sender, ItemClickEventArgs e)
         {
-            _forms.CurrAccList();
+            forms.CurrAccList();
         }
 
         private void barBtnCurrAccTransaction_ItemClick(object sender, ItemClickEventArgs e)
         {
 
-        }
+        } 
         #endregion
-
-
-        #region Cash Account
-        private void barBtnCashAccount_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            _forms.CashAccount();
-        }
-
-        private void barBtnCashList_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            _forms.CashList();
-        }
-
-        private void barBCashTransfer_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            _forms.CashTransaction();
-        }
-
-        private void barBCashDeposit_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            _forms.CashDeposit();
-        }
-        #endregion
-
-        private void barBtnNebimV3Connection_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            MessageBox.Show(ConnectionManager.GetVersion);
-        }
     }
 }
